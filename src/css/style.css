@@ -2574,6 +2574,7 @@ textarea.form-control-lg {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  color-adjust: exact;
 }
 
 .form-check-input[type="checkbox"] {
@@ -11967,6 +11968,22 @@ i {
   background: transparent;
 }
 
+.btn-primary {
+  text-decoration: none;
+  height: 100%;
+  background-color: #FF9643;
+  color: #FFFFFF;
+  border: #FF9643 solid 0.5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.btn-primary:hover {
+  background-color: #F5801C;
+  border: #F5801C solid 0.5px;
+}
+
 .navbar {
   padding: 20px 0;
   background-color: #fffcf7 !important;
@@ -12062,5 +12079,9 @@ i {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
   font-weight: 500;
+}
+
+.banner-container {
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

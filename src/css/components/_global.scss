@@ -4,6 +4,24 @@ body, * {
     background-color: $light-orange;
 }
 
+//=============== Font Awesoms ===============//
+
 i {
     background: transparent;
+}
+
+//=============== Buttons ===============//
+
+.btn-primary {
+    text-decoration: none;
+    height: 100%;
+    background-color: #FF9643;
+    color: #FFFFFF;
+    border: #FF9643 solid 0.5px;
+    height: fit-content;
+
+    &:hover {
+        background-color: #F5801C;
+        border: #F5801C solid 0.5px;
+    }
 }
