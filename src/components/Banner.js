@@ -1,32 +1,43 @@
-import React from 'react'
-import hero from '../images/undraw_male_avatar_323b.png'
+import React, { useState, useEffect } from 'react'
 
 function Banner() {
-  return (
-    <div>
-        <div className='container'>
-            <div className='d-flex justify-content-center'>
-                <div className='col-lg-11'>
-                    <div className='banner-container d-flex justify-content-between'>
-                        <div className='hero-text-container'>
-                            <p>Hello!</p>
-                            <h1>Lorem Ipsum is simply dummy</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Platea facilisis justo lorem dictum adipiscing ac sed non 
-                                magna. Diam porta ultricies non nulla turpis vitae neque.
-                            </p>
-                            <a href='#test' className='btn btn-primary'>Hire me</a>
-                        </div>
+    const [bannerTop, setBannetTop] = useState('slider-main-container');
+    const [bgBanner, setBgBanner] = useState('fix-bg-banner');
 
-                        <div className='hero-image'>
-                            <img src={hero} className='img-fluid' alt="Logo" />
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (window.scrollY < 200) {
+                setBannetTop('slider-main-container');
+                setBgBanner('fix-bg-banner');
+            } if (window.scrollY > 200){
+                setBannetTop('slider-main-container top');
+                setBgBanner('fix-bg-banner top');
+            }
+        },);
+        return () => clearInterval(interval);
+    }, []);
+
+  return (
+    <>
+        <div className='bg-color-banner'>
+            <div className={bgBanner}>
+                <div className='container'>
+                    <div className='d-flex justify-content-center'>
+                        <div className='col-lg-11'>
+                            <div className='banner-container d-flex'>
+                                <div className={bannerTop}>
+                                    <div className='welcome-text'>
+                                        <h3>lorem ipsum dolor!</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <h3 className='hero-text'>scroll down to see more!</h3>
         </div>
-    </div>
+    </>
   )
 }
 

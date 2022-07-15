@@ -7,6 +7,11 @@ $light-orange: #fffcf7;
 $orange: #F5801C;
 $gray: #C4C4C4;
 $bg-color:  #F7F7F7;
+$yellow-main: #ffee32;
+$yellow-secondary: #ffd100;
+$dark: #202020;
+$charcoal: #333533;
+$ash: #d6d6d6;
 
 //============ FONTS ============//
 @mixin open-sans {
@@ -18,4 +23,18 @@ $bg-color:  #F7F7F7;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
 }
-  
+
+@mixin bebas {
+  font-family: 'Bebas Neue', cursive;
+}
+
+
+//============ BREAKPOINTS ============//
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

@@ -1,3 +1,186 @@
 .banner-container {
     height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    .slider-main-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.bg-color-banner {
+    background-color: $yellow-main;
+    position: relative;
+
+    .hero-text {
+        position: absolute;
+        bottom: 132px;
+        left: -95px;
+        background-color: $charcoal;
+        padding-left: 20px;
+        @include bebas;
+        font-size: 3rem;
+        width: 300px;
+        color: $white;
+        letter-spacing: 5px;
+        transform: rotate(270deg);
+    }
+}
+
+.fix-bg-banner {
+    background-image: url(../images/meat-g01605ad03_1920.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    opacity: 1;
+    display: block;
+    box-sizing: border-box;
+    clip-path: ellipse(81% 100% at 81% 0%);
+
+    &.top {
+        background-position: center -20px;
+    }
+
+    .container {
+        background: none;
+
+        .justify-content-center {
+            background: none;
+
+            .col-lg-11 {
+                background: none;
+                
+                .banner-container {
+                    background: none;
+                    position: relative;
+
+                    .slider-main-container {
+                        position: fixed;
+                        transition: all 1s ease-in-out;
+                        top: 33%;
+
+                        .welcome-text {
+                            background-color: $ash;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 10px;
+    
+                            h3 {
+                                color: $charcoal;
+                                @include bebas;
+                                font-size: 6rem;
+                                margin: 0;
+                            }
+                        }
+
+                        &.top {
+                            transform: translateY(-100vh);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//================ SLICK SLIDER ================//
+
+.slick-slider {
+    width: 1200px;
+
+    @include media-breakpoint-down(xl) {
+        width: 850px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        width: 700px;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 500px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 300px;
+    }
+
+    .slider-box {
+        height: 94vh;
+        overflow: hidden;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-position: center;
+
+        .slider-image {
+            height: auto;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+        }
+
+        .slider-content {
+            z-index: 2;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.6); 
+            color: rgba(255, 255, 255, 0.6);
+            padding: 25px;
+            width: 100%;
+
+            p {
+                background-color: transparent;
+                color: $black;
+                @include poppins;
+                font-weight: 600;
+            }
+
+            .hero-text {
+                font-size: 20px;
+                font-weight: 900;
+            }
+        }
+    }
+
+    .slick-arrow {
+        display: none;
+    }   
+}
+
+.latest-blogs-main-container {
+    background: rgb(255,209,0);
+    background: linear-gradient(5deg, rgba(255,209,0,1) 29%, rgba(255,238,50,1) 54%);
+
+    .container {
+        background: none;
+
+        .justify-content-center {
+            background: none;
+
+            .latest-blogs-container {
+                height: 100vh;
+                background: transparent;
+                padding-top: 150px;
+
+                .section-title {
+                    @include bebas;
+                    font-size: 3rem;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                }
+
+                .blog-container {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
 }

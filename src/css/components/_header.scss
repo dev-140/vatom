@@ -1,63 +1,173 @@
-.navbar {
-    padding: 20px 0;
-    background-color: $light-orange !important;
+// .onTop {
+//     padding-top: 20px;
 
-    .navbar-brand {
-        color: $dark-purple;
-        @include poppins;
-        font-weight: bolder;
-        font-size: 30px;
-        margin-right: 30px;
-    }
+//     @include media-breakpoint-down(md) {
+//         padding-top: 10px;
+//     }
+// }
+
+.fixedMenu {
+    padding-top: 0;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.75);
+    background-color: $ash !important;
 
     .nav-links-container {
-        width: 100%;
-        justify-content: space-between;
+        transition: all 1s ease-in-out;
+        // width: 60% !important;
 
-        .btn-group {
-            .btn {
-                @include poppins;
-                color: $white;
-                border: none;
-                font-weight: 700;
-                background-color: $orange-main;
-                transition: background-color 0.1s;
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+        }
+    }
+}
 
-                &:hover {
-                    background-color: $orange;
+.sticky {
+    width: 100%;
+    position: fixed;
+    transition: all 0.2s;
+    z-index: 999;
+    background-color: transparent;
+    transition: all 1s ease-in-out;
+
+    .navbar {
+        background-color: transparent !important;
+        justify-content: flex-end;
+    
+        @include media-breakpoint-down(md) {
+            justify-content: space-between;
+            width: 100%;
+            padding: 5px 0;
+        }
+    
+        .navbar-brand {
+            color: $charcoal;
+            @include bebas;
+            letter-spacing: 2px;
+            font-weight: bolder;
+            font-size: 3rem;
+            margin-right: 30px;
+            line-height: 41px;
+    
+            @include media-breakpoint-down(md) {
+                padding: 0;
+            }
+        }
+    
+        .menu-btn {
+            display: none;
+            font-size: 30px;
+    
+            @include media-breakpoint-down(md) {
+                display: block;
+    
+                &.fa-xmark {
+                    text-align: right;
+                    font-size: 30px;
                 }
             }
         }
-
-        .input-group {
-            width: fit-content;
     
-            .search-btn {
-                text-decoration: none;
-                height: 100%;
-                background-color: $orange-main;
-                color: $white;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-                border: $orange-main solid 0.5px;
-            }
-            
-            .search-box {
-                width: 300px;
-                flex: none;
-                @include open-sans;
-                border: $orange-main solid 0.5px;
+        .nav-links-container {
+            width: 100%;
+            justify-content: space-between;
+            transition: all 1s ease-in-out;
     
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                    border: $orange solid 0.5px;
+            @include media-breakpoint-down(md) {
+                position: fixed;
+                padding: 20px 20px;
+                flex-direction: column-reverse;
+                right: -100vw;
+                top: 0;
+                transition: right 0.3s;
+                height: 100vh;
+                justify-content: flex-end;
+                background-color: $light-orange;
+    
+                &.active {
+                    right: 0;
+                    position: fixed;
                 }
-
-                &::placeholder {
-                    color: $dark-purple;
+            }
+    
+            .btn-group {
+                @include media-breakpoint-down(md){
+                    flex-direction: column
+                }
+    
+                .btn {
                     @include poppins;
-                    font-weight: 500;
+                    color: $white;
+                    border: none;
+                    font-weight: 700;
+                    background-color: $charcoal;
+                    transition: background-color 0.1s;
+    
+                    &:hover {
+                        background-color: $ash;
+                        border: solid 1px $charcoal;
+                        color: $charcoal;
+                    }
+    
+                    @include media-breakpoint-down(md) {
+                        margin-top: 10px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+    
+            .input-group {
+                width: fit-content;
+    
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    margin-top: 10px;
+                }
+    
+                .input-group-prepend {
+                    @include media-breakpoint-down(md) {
+                        width: 15%;
+                    }
+    
+                    .search-btn {
+                        text-decoration: none;
+                        height: 100%;
+                        background-color: $charcoal;
+                        color: $white;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        border: $charcoal solid 0.5px;
+        
+                        @include media-breakpoint-down(md) {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+                
+                .search-box {
+                    width: 300px;
+                    flex: none;
+                    @include open-sans;
+                    border: $charcoal solid 0.5px;
+    
+                    @include media-breakpoint-down(md) {
+                        width: 85%;
+                    }
+        
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                        border: $charcoal solid 0.5px;
+                    }
+    
+                    &::placeholder {
+                        color: $dark-purple;
+                        @include poppins;
+                        font-weight: 500;
+                    }
                 }
             }
         }

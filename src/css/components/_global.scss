@@ -1,7 +1,28 @@
-body, * {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0; 
     background-color: $light-orange;
+}
+
+.col-lg-11 {
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+}
+
+.container {
+    @include media-breakpoint-down(md) {
+         padding: 0 20px;
+    }
+}
+
+.dummy {
+    width: 100%;
+    height: 100vh;
 }
 
 //=============== Font Awesoms ===============//
@@ -15,13 +36,49 @@ i {
 .btn-primary {
     text-decoration: none;
     height: 100%;
-    background-color: #FF9643;
-    color: #FFFFFF;
-    border: #FF9643 solid 0.5px;
+    background-color: $orange-main;
+    color: $white;
+    border: $orange-main solid 0.5px;
     height: fit-content;
 
     &:hover {
-        background-color: #F5801C;
-        border: #F5801C solid 0.5px;
+        background-color: $orange;
+        border: $orange solid 0.5px;
+    }
+}
+
+.slick-dots li button:before {
+    top: -30px;
+    font-size: 11px;
+    color: $orange-main !important;
+}
+
+//=============== Dividers ===============//
+.divider-one {
+    height: 100px;
+    clip-path: polygon(100% 100%, 81% 71%, 73% 93%, 63% 64%, 54% 100%, 46% 63%, 37% 87%, 30% 62%, 23% 99%, 14% 64%, 0% 100%, 0% 0%, 100% 0%);
+    width: 100%;
+
+    &.yellow-main {
+        background-color: $yellow-main;
+    }
+
+    &.yellow-secondary {
+        background-color: $yellow-secondary;
+    }
+}
+
+//=============== Cards ===============//
+.blog-cards {
+    width: 286px;
+
+    .card-img-top {
+        width: 100%;
+        height: 180px;
+    }
+
+    .btn {
+        background-color: $charcoal;
+        color: $white;
     }
 }
