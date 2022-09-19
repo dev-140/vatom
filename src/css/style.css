@@ -12505,4 +12505,9 @@ i {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+.login-page-main-cotainer {
+  padding-top: 53px;
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

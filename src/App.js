@@ -5,6 +5,7 @@ import Navigation from "./components/Navigation"
 import { BrowserRouter as Router , Route, Routes } from 'react-router-dom'
 import Blogs from "./pages/Blogs"
 import ErrorPage from "./components/ErrorPage"
+import Login from "./components/Login"
 
 function App() {
     return (
@@ -12,9 +13,10 @@ function App() {
             <div className="App">
                 <Navigation />
                 <Routes>
-                    <Route path='/' element={<Homepage />} /> 
-                    <Route path='/en/blogs' element={<Blogs />} />
+                    <Route path='/home' element={<Homepage />} /> 
+                    <Route path='/home/blogs' element={<Blogs />} />
                     <Route path='*' element={<ErrorPage />}/>
+                    <Route path='/home/login' element={<Login />} />
                 </Routes>
             </div>
         </Router>
