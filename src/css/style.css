@@ -12571,6 +12571,13 @@ i {
   width: 286px;
 }
 
+@media (max-width: 767.98px) {
+  .blog-cards {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+
 .blog-cards .card-img-top {
   width: 100%;
   height: 180px;
@@ -12866,7 +12873,7 @@ i {
 }
 
 .fix-bg-banner {
-  background-image: url(../images/meat-g01605ad03_1920.jpg);
+  background-image: url(../images/home-banner.jpeg);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;

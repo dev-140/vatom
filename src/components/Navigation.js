@@ -25,7 +25,7 @@ function Navigation() {
                 <div className='d-flex justify-content-center'>
                     <div className='col-lg-11'>
                         <div className='navbar bg-light navbar-expand-lg navbar-light d-flex'>
-                            <a className='navbar-brand' href='#TEST'>Logo</a>
+                            <a className='navbar-brand' href='#TEST'>vatom</a>
 
                             <i className={isActive ? 'fa-solid fa-xmark menu-btn' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
 
@@ -34,16 +34,16 @@ function Navigation() {
                                     <Link to='/home' className='btn btn-secondary'>Home</Link>
                                     <a href='#TEST' className='btn btn-secondary'>Contacts</a>
                                     <a href='#TEST' className='btn btn-secondary'>About</a>
-                                    <Link to='/home/blogs' className='btn btn-secondary'>Blogs</Link>
-                                    <Link to='/home/login' className='btn btn-secondary'>Login</Link>
+                                    <Link to='/home/blogs' className='btn btn-secondary'>Browse</Link>
+                                    {/* <Link to='/home/login' className='btn btn-secondary'>Login</Link> */}
                                 </div>
                                 
-                                <div className='input-group'>
+                                {/* <div className='input-group'>
                                     <div className='input-group-prepend'>
                                         <a href='#TEST' className='input-group-text search-btn' id='btnGroupAddon'><i className='fa-solid fa-magnifying-glass'></i></a>
                                     </div>
                                     <input type='text' className='form-control search-box' placeholder='Search'></input>
-                                </div>
+                                </div> */}
 
                                 <i className={isActive ? 'fa-solid fa-xmark menu-btn' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
                             </div>

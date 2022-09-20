@@ -14,8 +14,8 @@ function Homepage() {
                 <div className='d-flex justify-content-center'>
                     <div className='col-lg-11'>
                         <div className='latest-blogs-container'>
-                            <AnimationOnScroll animateIn='animate__lightSpeedInLeft' animateOut='animate__bounceOutRight'>
-                                <h3 className='section-title'>Blogs</h3>
+                            <AnimationOnScroll animateIn='animate__lightSpeedInLeft' animateOut='animate__bounceOut'>
+                                <h3 className='section-title'>Some Pdf files</h3>
                             </AnimationOnScroll>
 
                             <BlogMain />
