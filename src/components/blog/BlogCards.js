@@ -9,7 +9,9 @@ function BlogCards(props) {
                     <div className='card-body'>
                         <h5 className='card-title'>{props.title}</h5>
                         <p className='card-text'>{props.text}</p>
-                        <a href={props.bId} className='btn'>Button</a>
+                        <p className='author-name'>by {props.author}</p>
+                        <a href={props.bId} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>view</a>
+                        <button className='btn btn-danger'>report</button>
                     </div>
                 </AnimationOnScroll>
             </div>

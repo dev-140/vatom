@@ -34,7 +34,7 @@ function Navigation() {
                                     <Link to='/home' className='btn btn-secondary'>Home</Link>
                                     <a href='#TEST' className='btn btn-secondary'>Contacts</a>
                                     <a href='#TEST' className='btn btn-secondary'>About</a>
-                                    <Link to='/home/blogs' className='btn btn-secondary'>Browse</Link>
+                                    <Link to='/home/upload' className='btn btn-secondary'>Upload</Link>
                                     {/* <Link to='/home/login' className='btn btn-secondary'>Login</Link> */}
                                 </div>
                                 
