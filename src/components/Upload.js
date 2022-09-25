@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection, Timestamp } from 'firebase/firestore'
 import { storage } from './firebase/firebase'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { db } from './firebase/firebase'
@@ -16,6 +16,13 @@ function Upload() {
         setPdfUrl(`pdf/${pdfUpload.name + v4() + '.pdf'}`)
     }
 
+    const today = Date.now()
+
+    var date = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(today)
+
+    var reportCount = 0;
+    var time = Timestamp.now();
+
     function handleSubmit(e) {
         e.preventDefault()
         if (pdfUpload == null) return;
@@ -30,7 +37,7 @@ function Upload() {
                     return
                 }
                 const filesCollectionRef = collection(db, 'pdfFiles')
-                addDoc(filesCollectionRef, { title, desc, author, pdfUrl, url, }).then(response => {
+                addDoc(filesCollectionRef, { title, desc, author, pdfUrl, url, reportCount, time, date}).then(response => {
                     console.log(response)
                 }).catch(error => {
                     console.log(error.message)

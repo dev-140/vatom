@@ -164,9 +164,10 @@
             background: none;
 
             .latest-blogs-container {
-                height: 100vh;
+                padding-bottom: 50px;
                 background: transparent;
                 padding-top: 150px;
+                transition: all .2s ease-in-out;
 
                 .section-title {
                     @include bebas;

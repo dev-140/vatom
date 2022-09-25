@@ -71,14 +71,26 @@ i {
 //=============== Cards ===============//
 .blog-cards {
     width: 286px;
+    min-height: 280px;
+    border: solid;
+    transition: all .1s ease-in-out;
+    
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 1px 18px 0px rgba(0,0,0,0.75);
+    }
 
     @include media-breakpoint-down(md) {
         margin: auto;
         margin-bottom: 10px;
     }
 
-    .card-img-top {
-        width: 100%;
-        height: 180px;
+    .card-body {
+        .card-title {
+            text-transform: capitalize;
+            font-family: 'Poppins', sans-serif;
+            color: $charcoal;
+            font-weight: bold;
+        }
     }
 }
