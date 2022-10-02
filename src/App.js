@@ -7,6 +7,7 @@ import Blogs from "./pages/Blogs"
 import ErrorPage from "./components/ErrorPage"
 import Login from "./components/Login"
 import Upload from "./components/Upload"
+import SingleFilePage from "./components/SingleFilePage"
 
 function App() {
     return (
@@ -14,11 +15,12 @@ function App() {
             <div className="App">
                 <Navigation />
                 <Routes>
-                    <Route path='/home' element={<Homepage />} /> 
-                    <Route path='/home/blogs' element={<Blogs />} />
+                    <Route path='' element={<Homepage />} /> 
+                    <Route path='/blogs' element={<Blogs />} />
                     <Route path='*' element={<ErrorPage />}/>
-                    <Route path='/home/login' element={<Login />} />
-                    <Route path='/home/upload' element={<Upload />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/upload' element={<Upload />} />
+                    <Route path='/file/:fileId' element={<SingleFilePage />} />
                 </Routes>
             </div>
         </Router>

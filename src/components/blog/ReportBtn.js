@@ -1,10 +1,16 @@
-import React, { useEffect, useState} from 'react'
+import React from 'react'
 import { doc, updateDoc, increment } from "firebase/firestore"
 import { db } from '../firebase/firebase'
 
 function ReportBtn(props) {
-    const [reportedId, setReportedId] = useState('')
-    const [reportedList, setReportedList] = useState([])
+    function reportId() {
+        var setId = JSON.parse(localStorage.getItem('k') || "[]")
+        const arr = Array.from([props.uid]);
+        console.log(arr); 
+        setId.push(arr)
+        localStorage.setItem('k', JSON.stringify(setId))
+
+    }
 
     const handleUpdate = async (e) => {
         e.preventDefault()
@@ -18,16 +24,8 @@ function ReportBtn(props) {
         }
     }
 
-    const addReport = (e) => {
-        setReportedList([...reportedList, reportedId])
-    }
-
-    useEffect(()=> {
-        localStorage.setItem('dataReported', JSON.stringify([...reportedList]));
-    }, [addReport])
-
     return (
-        <button className='btn btn-danger' data-uid={props.uid} data-count={props.reportCount} onClick={(e) => { handleUpdate(e) }}>report</button>
+        <button className='btn btn-danger' data-uid={props.uid} data-count={props.reportCount} onClick={(e) => {handleUpdate(e); reportId(e)}}>report</button>
     )
 }
 

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { addDoc, collection, Timestamp } from 'firebase/firestore'
-import { storage } from './firebase/firebase'
+import { storage, db } from './firebase/firebase'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
-import { db } from './firebase/firebase'
 import { v4} from 'uuid'
 
 

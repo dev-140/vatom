@@ -23,7 +23,7 @@ function BlogMain() {
     // }, [postList])
 
    function getFile() {
-    const pdfListRef = collection(db, 'pdfFiles') 
+    const pdfListRef = collection(db, 'pdfFiles')
         getDocs(pdfListRef) 
         .then(response => {
             response.docs.forEach((doc) => {

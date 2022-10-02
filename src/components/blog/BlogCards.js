@@ -1,5 +1,6 @@
 import React from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
+import { Link } from 'react-router-dom'
 import ReportBtn from './ReportBtn'
 
 function BlogCards(props) {
@@ -12,7 +13,7 @@ function BlogCards(props) {
                         <h5 className='card-title'>{props.title}</h5>
                         <p className='card-text'>{props.text}</p>
                         <p className='author-name'>by {props.author}</p>
-                        <a href={props.bId} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>view</a>
+                        <Link to={`/file/${props.uid}`} target="_blank" rel="noopener noreferrer" className='btn btn-primary'>view</Link>
                         <ReportBtn uid={props.uid} reportCount={props.reportCount}></ReportBtn>
                     </div>
                 </AnimationOnScroll>

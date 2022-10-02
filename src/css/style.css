@@ -12623,6 +12623,7 @@ i {
   background-color: transparent;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  top: 0;
 }
 
 .sticky .navbar {
@@ -13065,6 +13066,10 @@ i {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
+}
+
+.single-file-main-container {
+  margin-top: 100px;
 }
 
 .upload-main-container {
