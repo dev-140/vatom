@@ -9,7 +9,6 @@ function ReportBtn(props) {
         console.log(arr); 
         setId.push(arr)
         localStorage.setItem('k', JSON.stringify(setId))
-
     }
 
     const handleUpdate = async (e) => {

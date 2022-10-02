@@ -20,6 +20,7 @@ function Upload() {
     var date = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(today)
 
     var reportCount = 0;
+    var likeCount = 0;
     var time = Timestamp.now();
 
     function handleSubmit(e) {
@@ -36,7 +37,7 @@ function Upload() {
                     return
                 }
                 const filesCollectionRef = collection(db, 'pdfFiles')
-                addDoc(filesCollectionRef, { title, desc, author, pdfUrl, url, reportCount, time, date}).then(response => {
+                addDoc(filesCollectionRef, { title, desc, author, pdfUrl, url, reportCount, likeCount, time, date}).then(response => {
                     console.log(response)
                 }).catch(error => {
                     console.log(error.message)

@@ -7,12 +7,12 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC5dWWzxYB7b-Auk91qJEBkOIwdAxeV7C0",
-  authDomain: "vatom-deac3.firebaseapp.com",
-  projectId: "vatom-deac3",
-  storageBucket: "vatom-deac3.appspot.com",
-  messagingSenderId: "678283181964",
-  appId: "1:678283181964:web:6d820c607876959b83a0a9"
+  apiKey: "AIzaSyBK3gHvXiaVT04wBMa9Y3LDH32Z7_rNWwY",
+  authDomain: "vatom-65743.firebaseapp.com",
+  projectId: "vatom-65743",
+  storageBucket: "vatom-65743.appspot.com",
+  messagingSenderId: "510605245859",
+  appId: "1:510605245859:web:c4319ad8e6f4d822ebae16"
 };
 
 // Initialize Firebase

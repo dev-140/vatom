@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { doc, getDocs, getDoc, query, orderBy, collection } from 'firebase/firestore'
 import { db } from './firebase/firebase'
@@ -12,12 +12,16 @@ function SingleFilePage() {
     const dataId = params.fileId
     const docRef = doc(db, 'pdfFiles', dataId)
 
+
+    useEffect(() => {
+        getData()
+        getComments()
+    }, [])
+
     const getData = async () => {
         const docSnap = await getDoc(docRef);
         setData(docSnap.data())
     };
-
-    getData()
 
     const commentListRefs = collection(db, 'pdfFiles', dataId, 'comments')
 
@@ -30,10 +34,8 @@ function SingleFilePage() {
         
         setCommentList(newData);
     };
-
-    getComments()
-
-
+    
+    
     return (
     <div className='single-file-main-container'>
         <div className='container'>
