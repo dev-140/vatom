@@ -13069,7 +13069,98 @@ i {
 }
 
 .single-file-main-container {
-  margin-top: 100px;
+  padding: 100px 0 50px;
+  background-color: #ffee32;
+}
+
+.single-file-main-container .data-container .author {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+  font-family: 'Poppins';
+  background-color: #333533;
+  padding: 10px;
+  font-size: 20px;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.single-file-main-container .data-container .desc {
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+  color: #333533;
+  margin-bottom: 0;
+  font-family: 'Bebas Neue';
+}
+
+.single-file-main-container .comment-section {
+  margin-top: 50px;
+  padding-top: 10px;
+  border-top: solid 1px #000000;
+}
+
+.single-file-main-container .comment-section .heading {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #333533;
+  color: #FFFFFF;
+  font-family: 'Poppins';
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.single-file-main-container .comment-section .comment-list {
+  padding: 10px 0 50px;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.single-file-main-container .comment-section .comment-list .card {
+  padding: 10px;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.single-file-main-container .comment-section .comment-list .card .coment-date {
+  background-color: #ffd100;
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #333533;
+  font-family: 'Poppins';
+  font-weight: bold;
+  padding: 5px;
+}
+
+.single-file-main-container .comment-section .comment-list .card .comment-details .author {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: 'Poppins';
+  padding-bottom: 5px;
+  border-bottom: 3px solid #333533;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.single-file-main-container .comment-section .comment-list .card .comment-details .comment-content {
+  margin-bottom: 0;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1.5px;
 }
 
 .upload-main-container {
