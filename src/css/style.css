@@ -12622,6 +12622,7 @@ i {
 
 .blog-cards .card-body .card-title {
   margin-bottom: 5px;
+  overflow: hidden;
   font-family: 'Bebas Neue', cursive;
   color: #000000;
   text-overflow: ellipsis;

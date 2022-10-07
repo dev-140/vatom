@@ -135,6 +135,7 @@ i {
 
         .card-title {
             margin-bottom: 5px;
+            overflow: hidden;
             font-family: 'Bebas Neue', cursive;
             color: $black;
             text-overflow: ellipsis;
