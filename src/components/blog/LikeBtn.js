@@ -4,16 +4,16 @@ import { db } from '../firebase/firebase'
 
 function LikeBtn(props) {
     const [likes, setLikes] = useState(props.likeCount);
-    const [likeStatus, setLikeStatus] = useState('like')
+    const [likeStatus, setLikeStatus] = useState('likes')
 
     function likeBtn(e) {
-        if (likeStatus === 'like') {
+        if (likeStatus === 'likes') {
             setLikes(likes + 1)
             setLikeStatus('unlike')
             handleUpdate(e)
         } else if (likeStatus === 'unlike') {
             setLikes(likes - 1)
-            setLikeStatus('like')
+            setLikeStatus('likes')
             handleUpdateMinus(e)
         }
     }
@@ -53,7 +53,7 @@ function LikeBtn(props) {
     }
 
     return (
-        <button className='btn btn-info' data-uid={props.uid} data-like-count={props.likeCount} onClick={(e) => { likeId(e); likeBtn(e)}}>{likeStatus} : {likes}</button>
+        <button className='btn btn-info like' data-uid={props.uid} data-like-count={props.likeCount} onClick={(e) => { likeId(e); likeBtn(e)}}>{likeStatus} : {likes}</button>
     )
 }
 

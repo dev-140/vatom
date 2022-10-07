@@ -61,6 +61,7 @@ function SingleFilePage() {
                 <div className='data-container d-flex flex-column'>
                     <p className='author'>by: {data.author}</p>
                     <p className='desc'>Description: {data.desc}</p>
+                    <a className='btn btn-primary view-file-btn' href={data.url}>View File</a>
                 </div>
 
                 <div className='comment-section'>

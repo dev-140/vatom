@@ -12530,22 +12530,6 @@ i {
   background: transparent;
 }
 
-.btn-primary {
-  text-decoration: none;
-  height: 100%;
-  background-color: #FF9643;
-  color: #FFFFFF;
-  border: #FF9643 solid 0.5px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.btn-primary:hover {
-  background-color: #F5801C;
-  border: #F5801C solid 0.5px;
-}
-
 .slick-dots li button:before {
   top: -30px;
   font-size: 11px;
@@ -12568,18 +12552,118 @@ i {
 }
 
 .blog-cards {
-  width: 286px;
-  min-height: 280px;
+  width: 290px;
+  height: 448px;
   border: solid;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  position: relative;
+  border-radius: 29px;
+  background-color: #F3E778;
+  border: 0;
+  padding: 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .blog-cards:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-box-shadow: 1px 1px 18px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 1px 1px 18px 0px rgba(0, 0, 0, 0.75);
+}
+
+.blog-cards .card-header {
+  border-radius: 17px;
+  background-color: #000000;
+  margin-bottom: 20px;
+}
+
+.blog-cards .card-header .author-name {
+  margin-right: 5px;
+  margin-bottom: 0;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-family: 'Poppins';
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.blog-cards .card-header .date-created {
+  margin-bottom: 0;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-family: 'Poppins';
+  letter-spacing: 2px;
+}
+
+.blog-cards .card-sub-header {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.blog-cards .card-sub-header p {
+  margin-bottom: 5px;
+  font-family: 'Bebas Neue', cursive;
+  color: #000000;
+  text-overflow: ellipsis;
+  width: 200px;
+  height: 26px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+.blog-cards .card-body {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  margin-bottom: 14px;
+  height: 251px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blog-cards .card-body .card-title {
+  margin-bottom: 5px;
+  font-family: 'Bebas Neue', cursive;
+  color: #000000;
+  text-overflow: ellipsis;
+  width: 200px;
+  height: 26px;
+  text-transform: capitalize;
+}
+
+.blog-cards .card-body .card-text {
+  font-size: 18px;
+  font-family: 'Poppins';
+  color: #000000;
+}
+
+.blog-cards .card-footer {
+  border: 0;
+  border-radius: 17px;
+  height: 43px;
+  background-color: #000000;
+}
+
+.blog-cards .card-footer .btn {
+  font-size: 12px;
+  color: #FFFFFF;
+  border-radius: 100px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-family: 'Poppins';
+  font-weight: bold;
+  border: 0;
+}
+
+.blog-cards .card-footer .btn.report {
+  background-color: #C63333;
+}
+
+.blog-cards .card-footer .btn.like {
+  background-color: #337FC6;
+}
+
+.blog-cards .card-footer .btn.view {
+  background-color: #51983F;
 }
 
 @media (max-width: 767.98px) {
@@ -13101,6 +13185,10 @@ i {
   font-family: 'Bebas Neue';
 }
 
+.single-file-main-container .data-container .view-file-btn {
+  width: 200px;
+}
+
 .single-file-main-container .comment-section {
   margin-top: 50px;
   padding-top: 10px;
@@ -13163,8 +13251,36 @@ i {
   letter-spacing: 1.5px;
 }
 
+.blog-container {
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.browse-main-container {
+  margin-top: 100px;
+}
+
 .upload-main-container {
   padding-top: 100px;
+}
+
+.upload-main-container .upload-container {
+  margin: auto;
+}
+
+.upload-main-container .upload-container .input-group {
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.upload-main-container .upload-container .input-group .file-type {
+  margin-bottom: 0;
+  cursor: pointer;
+  text-transform: capitalize;
+  border-radius: 5px !important;
 }
 
 .login-page-main-cotainer {

@@ -1,3 +1,19 @@
 .upload-main-container {
     padding-top: 100px;
+
+    .upload-container {
+        margin: auto;
+
+        .input-group {
+            gap: 20px;
+            align-items: center;
+
+            .file-type {
+                margin-bottom: 0;
+                cursor: pointer;
+                text-transform: capitalize;
+                border-radius: 5px !important;
+            }
+        }
+    }
 }

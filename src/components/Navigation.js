@@ -32,7 +32,7 @@ function Navigation() {
                             <div className={isActive ? 'nav-links-container d-flex active' : 'nav-links-container d-flex'}>
                                 <div className='btn-group'>
                                     <Link to='' className='btn btn-secondary'>Home</Link>
-                                    <a href='#TEST' className='btn btn-secondary'>Contacts</a>
+                                    <Link to='/browse' className='btn btn-secondary'>Browse</Link>
                                     <a href='#TEST' className='btn btn-secondary'>About</a>
                                     <Link to='/upload' className='btn btn-secondary'>Upload</Link>
                                     {/* <Link to='/home/login' className='btn btn-secondary'>Login</Link> */}

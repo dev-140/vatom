@@ -63,8 +63,8 @@ function BlogMain() {
     }
 
     return (
-        <div className='blog-container d-flex flex-column flex-md-row'>
-            {postList.map(file => <BlogCards key={file.id} likeCount={file.likeCount} uid={file.id} time={file.date} reportCount={file.reportCount} author={file.author} bId={file.url} title={file.title} text={file.desc}/>)} 
+        <div className='blog-container d-flex flex-column flex-md-row justify-content-between'>
+            {postList.map(file => <BlogCards key={file.id} type={file.type} likeCount={file.likeCount} uid={file.id} time={file.date} reportCount={file.reportCount} author={file.author} bId={file.url} title={file.title} text={file.desc}/>)} 
         </div> 
     )
 }

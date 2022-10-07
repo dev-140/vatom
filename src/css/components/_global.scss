@@ -33,19 +33,19 @@ i {
 
 //=============== Buttons ===============//
 
-.btn-primary {
-    text-decoration: none;
-    height: 100%;
-    background-color: $orange-main;
-    color: $white;
-    border: $orange-main solid 0.5px;
-    height: fit-content;
+// .btn-primary {
+//     text-decoration: none;
+//     height: 100%;
+//     background-color: $orange-main;
+//     color: $white;
+//     border: $orange-main solid 0.5px;
+//     height: fit-content;
 
-    &:hover {
-        background-color: $orange;
-        border: $orange solid 0.5px;
-    }
-}
+//     &:hover {
+//         background-color: $orange;
+//         border: $orange solid 0.5px;
+//     }
+// }
 
 .slick-dots li button:before {
     top: -30px;
@@ -70,15 +70,148 @@ i {
 
 //=============== Cards ===============//
 .blog-cards {
-    width: 286px;
-    min-height: 280px;
+    width: 290px;
+    height: 448px;
     border: solid;
-    transition: all .1s ease-in-out;
-    
+    position: relative;
+    border-radius: 29px;
+    background-color: $card-yellow;
+    border: 0;
+    padding: 20px;
+    transition: all 0.2s;
+
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         box-shadow: 1px 1px 18px 0px rgba(0,0,0,0.75);
     }
+
+    .card-header {
+        border-radius: 17px;
+        background-color: $black;
+        margin-bottom: 20px;
+
+        .author-name {
+            margin-right: 5px;
+            margin-bottom: 0;
+            color: $white;
+            font-weight: bold;
+            font-family: 'Poppins';
+            letter-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        .date-created {
+            margin-bottom: 0;
+            color: $white;
+            font-weight: bold;
+            font-family: 'Poppins';
+            letter-spacing: 2px;
+        }
+    }
+
+    .card-sub-header {
+        margin-bottom: 10px;
+        padding-left: 10px;
+
+        p {
+            margin-bottom: 5px;
+            font-family: 'Bebas Neue', cursive;
+            color: $black;
+            text-overflow: ellipsis;
+            width: 200px;
+            height: 26px;
+            text-transform: capitalize;
+            margin-bottom: 0;
+        }
+    }
+
+    .card-body {
+        background-color: $white;
+        border-radius: 15px;
+        margin-bottom: 14px;
+        height: 251px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .card-title {
+            margin-bottom: 5px;
+            font-family: 'Bebas Neue', cursive;
+            color: $black;
+            text-overflow: ellipsis;
+            width: 200px;
+            height: 26px;
+            text-transform: capitalize;
+        }
+        
+        .card-text {
+            font-size: 18px;
+            font-family: 'Poppins';
+            color: $black;
+        }
+    }
+
+    .card-footer {
+        border: 0;
+        border-radius: 17px;
+        height: 43px;
+        background-color: $black;
+
+        .btn {
+            font-size: 12px;
+            color: $white;
+            border-radius: 100px;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            font-family: 'Poppins';
+            font-weight: bold;
+            border: 0;
+
+            &.report {
+                background-color: #C63333;
+            }
+
+            &.like {
+                background-color: #337FC6;
+            }
+            
+            &.view {
+                background-color: #51983F;
+            }
+        }
+    }
+
+    // &.question {
+    //     &::after {
+    //         content: 'Question';
+    //         font-size: 12px;
+    //         position: absolute;
+    //         bottom: 10px;
+    //         right: 10px;
+    //         background: $yellow-main;
+    //         padding: 5px;
+    //         border-radius: 5px;
+    //         font-family: 'Poppins';
+    //         color: $white;
+    //         font-weight: bold;
+    //         color: $black;
+    //     }
+    // }
+
+    // &.file {
+    //     &::after {
+    //         content: 'File';
+    //         font-size: 12px;
+    //         position: absolute;
+    //         bottom: 10px;
+    //         right: 10px;
+    //         background: $dark-purple;
+    //         padding: 5px;
+    //         font-family: 'Poppins';
+    //         color: $white;
+    //         padding: 7px;
+    //         border-radius: 30px;
+    //     }
+    // }
 
     @include media-breakpoint-down(md) {
         margin: auto;

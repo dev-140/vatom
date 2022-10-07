@@ -8,6 +8,7 @@ import ErrorPage from "./components/ErrorPage"
 import Login from "./components/Login"
 import Upload from "./components/Upload"
 import SingleFilePage from "./components/SingleFilePage"
+import Browse from "./components/Browse"
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                     <Route path='*' element={<ErrorPage />}/>
                     <Route path='/login' element={<Login />} />
                     <Route path='/upload' element={<Upload />} />
+                    <Route path='/browse' element={<Browse />} />
                     <Route path='/file/:fileId' element={<SingleFilePage />} />
                 </Routes>
             </div>
