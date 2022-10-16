@@ -30,11 +30,11 @@ function Navigation() {
                             <i className={isActive ? 'fa-solid fa-xmark menu-btn' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
 
                             <div className={isActive ? 'nav-links-container d-flex active' : 'nav-links-container d-flex'}>
-                                <div className='btn-group'>
+                                <div className='btn-group' onClick={menuClick}>
                                     <Link to='' className='btn btn-secondary'>Home</Link>
                                     <Link to='/browse' className='btn btn-secondary'>Browse</Link>
                                     <a href='#TEST' className='btn btn-secondary'>About</a>
-                                    <Link to='/upload' className='btn btn-secondary'>Upload</Link>
+                                    <Link to='/upload-category' className='btn btn-secondary'>Upload</Link>
                                     {/* <Link to='/home/login' className='btn btn-secondary'>Login</Link> */}
                                 </div>
                                 

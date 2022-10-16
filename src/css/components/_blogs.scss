@@ -103,3 +103,27 @@
 .browse-main-container {
     margin-top: 100px;
 }
+
+.file-active {
+    .card {
+        &.document {
+            display: block;
+        }
+
+        &.question {
+            display: none;
+        }
+    }
+}
+
+.question-active {
+    .card {
+        &.document {
+            display: none;
+        }
+
+        &.question {
+            display: block;
+        }
+    }
+}

@@ -3,6 +3,7 @@ import { addDoc, collection, Timestamp } from 'firebase/firestore'
 import { storage, db } from './firebase/firebase'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { v4} from 'uuid'
+import { useParams } from 'react-router-dom'
 
 function Upload() {
     const [title, setTitle] = useState('')
@@ -10,17 +11,16 @@ function Upload() {
     const [author, setAuthor] = useState('')
     const [pdfUpload, setPdfUpload] = useState('')
     const [pdfUrl, setPdfUrl] = useState('')
-    const [type, setType] = useState('file')
-    const getFileUrl = () => {
-        setPdfUrl(`pdf/${pdfUpload.name + v4() + '.pdf'}`)
-    }
+    const [type, setType] = useState('document')
+    const getFileUrl = () => {setPdfUrl(`pdf/${pdfUpload.name + v4() + '.pdf'}`)}
+    const params = useParams()
+    const dataCategory = params.categoryId
     
     const menuClick = (e) => {
-
-        if (type === 'file') {
+        if (type === 'document') {
             setType('question')
         } else {
-            setType('file')
+            setType('document')
         }
     };
 
@@ -46,7 +46,7 @@ function Upload() {
                     return
                 }
                 const filesCollectionRef = collection(db, 'pdfFiles')
-                addDoc(filesCollectionRef, { title, desc, author, pdfUrl, url, reportCount, likeCount, time, date, type}).then(response => {
+                addDoc(filesCollectionRef, { title, desc, author, pdfUrl, url, reportCount, likeCount, time, date, type, dataCategory}).then(response => {
                     console.log(response)
                 }).catch(error => {
                     console.log(error.message)
@@ -55,25 +55,32 @@ function Upload() {
         })
     }
 
-  return (
-    <div className='upload-main-container'>
-        <div className='container'>
-            <div className='upload-container col-10'>
-                <h4>Add Files</h4>
-                <form onSubmit={handleSubmit} className='d-flex flex-column'>
-                    <input className='mb-3 form-control' id='title' type='text' placeholder='Title' value={title} onChange={ e=> setTitle(e.target.value) }/>
-                    <input className='mb-3 form-control' id='desc' type='text' placeholder='Description' value={desc} onChange={ e=> setDesc(e.target.value) }/>
-                    <input className='mb-3 form-control' id='author' type='text' placeholder='Your Name' value={author} onChange={ e=> setAuthor(e.target.value) }/>
-                    <div className='input-group mb-3 d-flex justify-content-center'>
-                        <p className='btn btn-primary file-type' onClick={menuClick}>{type}</p>
-                        <input className='file-input'  accept="application/pdf, application/vnd.ms-excel" type='file' onChange={(event) => {setPdfUpload(event.target.files[0])}} />
-                    </div>
-                    <button className='btn btn-primary' type='submit' onClick={getFileUrl}>Upload</button>
-                </form>
+    return (
+        <div className='upload-main-container'>
+            <div className='container'>
+                <div className='upload-container col-10'>
+                    <h4>Upload {type}</h4>
+                    <form onSubmit={handleSubmit} className='d-flex flex-column'>
+                        <div className='input-wrapper d-flex flex-column flex-md-row justify-content-between align-items-start mb-1'>
+                            <div className='col-12 col-md-6 p-1'>
+                                <input className='mb-3 form-control' id='title' type='text' placeholder='Title' value={title} onChange={ e=> setTitle(e.target.value) }/>
+                                <input className='mb-3 form-control' id='desc' type='textarea' placeholder='Description' value={desc} onChange={ e=> setDesc(e.target.value) }/>
+                                <input className='mb-3 form-control' id='author' type='text' placeholder='Your Name' value={author} onChange={ e=> setAuthor(e.target.value) }/>
+                            </div>
+                            <div className='file-input-container col-12 col-md-6 d-flex justify-content-start flex-column p-1'>
+                                <button className='btn btn-primary file-type mb-3' onClick={menuClick}>Type: {type}</button>
+                                <div className='file-input-btn-wrapper'>
+                                    <input className='file-input' accept="application/pdf, application/vnd.ms-excel" type='file' onChange={(event) => {setPdfUpload(event.target.files[0])}} />
+                                    <button className='file-overlay'><i className="fas fa-upload"></i>Select File</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button className='btn btn-primary' type='submit' onClick={getFileUrl}>Upload</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Upload

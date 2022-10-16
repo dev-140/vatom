@@ -57,6 +57,7 @@
         .menu-btn {
             display: none;
             font-size: 30px;
+            cursor: pointer;
     
             @include media-breakpoint-down(md) {
                 display: block;

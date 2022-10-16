@@ -1,7 +1,7 @@
 import React, { useState ,useEffect } from 'react';
 import BlogCards from './BlogCards';
 import { collection, getDocs, query, orderBy, deleteDoc, doc } from 'firebase/firestore';
-import { db } from '../firebase/firebase' 
+import { db } from '../firebase/firebase'
  
 function BlogMain() {
     const [files, setFiles] = useState([])
@@ -17,10 +17,6 @@ function BlogMain() {
     useEffect(()=> {
         deleteFile()
     }, [removeFile])
-
-    // useEffect(()=> {
-    //     console.log(postList)
-    // }, [postList])
 
    function getFile() {
     const pdfListRef = collection(db, 'pdfFiles')
@@ -40,6 +36,8 @@ function BlogMain() {
                 id: doc.id
             }))
             setFiles(files)
+
+            document.body.classList.add('done-loading-data')
         })
         .catch(error => console.log(error.message))
    }
