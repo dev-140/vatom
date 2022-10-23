@@ -12552,35 +12552,34 @@ i {
 }
 
 .blog-cards {
-  width: 290px;
-  height: 448px;
-  border: solid;
-  position: relative;
-  border-radius: 29px;
-  background-color: #F3E778;
+  width: 100%;
+  height: 350px;
   border: 0;
+  position: relative;
+  background-color: transparent;
   padding: 20px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  border-bottom: solid 1px #818181;
+  border-radius: 0;
 }
 
 .blog-cards:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
   -webkit-box-shadow: 1px 1px 18px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 1px 1px 18px 0px rgba(0, 0, 0, 0.75);
 }
 
 .blog-cards .card-header {
   border-radius: 17px;
-  background-color: #000000;
+  background-color: transparent;
   margin-bottom: 20px;
+  border: none;
 }
 
 .blog-cards .card-header .author-name {
   margin-right: 5px;
   margin-bottom: 0;
-  color: #FFFFFF;
+  color: #000000;
   font-weight: bold;
   font-family: 'Poppins';
   letter-spacing: 2px;
@@ -12589,7 +12588,7 @@ i {
 
 .blog-cards .card-header .date-created {
   margin-bottom: 0;
-  color: #FFFFFF;
+  color: #000000;
   font-weight: bold;
   font-family: 'Poppins';
   letter-spacing: 2px;
@@ -12611,11 +12610,15 @@ i {
   margin-bottom: 0;
 }
 
+.blog-cards .card-sub-header .data-category {
+  width: 100%;
+}
+
 .blog-cards .card-body {
-  background-color: #FFFFFF;
+  background-color: transparent;
   border-radius: 15px;
   margin-bottom: 14px;
-  height: 251px;
+  height: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -12641,13 +12644,14 @@ i {
   border: 0;
   border-radius: 17px;
   height: 43px;
-  background-color: #000000;
+  background-color: transparent;
+  width: 220px;
 }
 
 .blog-cards .card-footer .btn {
   font-size: 12px;
   color: #FFFFFF;
-  border-radius: 100px;
+  border-radius: 5px;
   padding: 5px 10px;
   text-transform: uppercase;
   font-family: 'Poppins';
@@ -12751,6 +12755,11 @@ i {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.h-100 {
+  height: 100%;
+  min-height: 100vh;
 }
 
 .fixedMenu {
@@ -13228,7 +13237,6 @@ i {
 
 .single-file-main-container {
   padding: 100px 0 50px;
-  background-color: #ffee32;
 }
 
 .single-file-main-container .data-container .author {
@@ -13335,24 +13343,73 @@ i {
   margin-top: 100px;
 }
 
-.file-active .card.document {
+.file-active .Mathematics-Surveying-and-Transportation-Engineering.document {
   display: block;
 }
 
-.file-active .card.question {
-  display: none;
+.file-active .Mathematics-Surveying-and-Transportation-Engineering.question {
+  display: none !important;
 }
 
-.question-active .card.document {
-  display: none;
+.file-active .Hydraulics-and-Geotechnical-Engineering.document {
+  display: block;
 }
 
-.question-active .card.question {
+.file-active .Hydraulics-and-Geotechnical-Engineering.question {
+  display: none !important;
+}
+
+.file-active .Structural-Engineering-and-Construction.document {
+  display: block;
+}
+
+.file-active .Structural-Engineering-and-Construction.question {
+  display: none !important;
+}
+
+.question-active .Mathematics-Surveying-and-Transportation-Engineering.document {
+  display: none !important;
+}
+
+.question-active .Mathematics-Surveying-and-Transportation-Engineering.question {
+  display: block;
+}
+
+.question-active .Hydraulics-and-Geotechnical-Engineering.document {
+  display: none !important;
+}
+
+.question-active .Hydraulics-and-Geotechnical-Engineering.question {
+  display: block;
+}
+
+.question-active .Structural-Engineering-and-Construction.document {
+  display: none !important;
+}
+
+.question-active .Structural-Engineering-and-Construction.question {
   display: block;
 }
 
 .upload-main-container {
   padding-top: 100px;
+}
+
+.upload-main-container .loading-main-container {
+  background-color: rgba(128, 128, 128, 0.541);
+  z-index: 999;
+}
+
+.upload-main-container .loading-main-container .loading {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+}
+
+.upload-main-container .loading-main-container .loading::after {
+  display: none;
 }
 
 .upload-main-container .upload-container {
@@ -13399,8 +13456,115 @@ i {
   margin-right: 8px;
 }
 
+.cat-one .Mathematics-Surveying-and-Transportation-Engineering.document {
+  display: block;
+}
+
+.cat-one .Mathematics-Surveying-and-Transportation-Engineering.question {
+  display: block;
+}
+
+.cat-one .Hydraulics-and-Geotechnical-Engineering.document {
+  display: none;
+}
+
+.cat-one .Hydraulics-and-Geotechnical-Engineering.question {
+  display: none;
+}
+
+.cat-one .Structural-Engineering-and-Construction {
+  display: none;
+}
+
+.cat-two .Hydraulics-and-Geotechnical-Engineering.document {
+  display: block;
+}
+
+.cat-two .Hydraulics-and-Geotechnical-Engineering.question {
+  display: block;
+}
+
+.cat-two .Mathematics-Surveying-and-Transportation-Engineering {
+  display: none;
+}
+
+.cat-two .Mathematics-Surveying-and-Transportation-Engineering.document {
+  display: none;
+}
+
+.cat-two .Mathematics-Surveying-and-Transportation-Engineering.question {
+  display: none;
+}
+
+.cat-two .Structural-Engineering-and-Construction.document {
+  display: none;
+}
+
+.cat-two .Structural-Engineering-and-Construction.question {
+  display: none;
+}
+
+.cat-three .Structural-Engineering-and-Construction.document {
+  display: block;
+}
+
+.cat-three .Structural-Engineering-and-Construction.question {
+  display: block;
+}
+
+.cat-three .Mathematics-Surveying-and-Transportation-Engineering.document {
+  display: none;
+}
+
+.cat-three .Mathematics-Surveying-and-Transportation-Engineering.question {
+  display: none;
+}
+
+.cat-three .Hydraulics-and-Geotechnical-Engineering.document {
+  display: none;
+}
+
+.cat-three .Hydraulics-and-Geotechnical-Engineering.question {
+  display: none;
+}
+
+.refinements-container .section-title {
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.refinements-container .section-title:last-child {
+  margin-top: 10px;
+}
+
+.refinements-container button {
+  background-color: transparent;
+  font-family: 'Poppins';
+  border: none;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 16px;
+  text-align: left;
+  border-bottom: solid 1px #818181;
+}
+
+.refinements-container button:hover {
+  font-weight: bold;
+}
+
+.upload-category-main-container {
+  padding-top: 100px;
+}
+
 .login-page-main-cotainer {
   padding-top: 53px;
   width: 100%;
+}
+
+.footer-main-container {
+  background-color: #333533;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=style.css.map */

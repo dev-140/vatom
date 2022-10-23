@@ -56,7 +56,7 @@ function SingleFilePage() {
     }
     
     return (
-        <div className='single-file-main-container'>
+        <div className='single-file-main-container h-100 pt-0 d-flex align-items-center'>
             <div className='container flex-column'>
                 <div className='data-container d-flex flex-column'>
                     <p className='author'>by: {data.author}</p>

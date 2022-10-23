@@ -30,10 +30,12 @@ function Categories() {
     }
 
   return (
-    <div>
-        <button onClick={catOne}>one</button>
-        <button onClick={catTwo}>two</button>
-        <button onClick={catThree}>three</button>
+    <div className='refinements-container d-flex flex-column col-2 p-1'>
+        <p className='section-title mb-1'>sort by category</p>
+        <button onClick={catOne}>Mathematics, Surveying and Transportation Engineering</button>
+        <button onClick={catTwo}>Hydraulics and Geotechnical Engineering</button>
+        <button onClick={catThree}>Structural Engineering and Construction</button>
+        <p className='section-title mb-1 mt-3'>sort by type</p>
         <button onClick={question}>questions</button>
         <button onClick={file}>documents</button>
     </div>

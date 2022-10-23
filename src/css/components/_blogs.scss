@@ -1,6 +1,5 @@
 .single-file-main-container {
     padding: 100px 0 50px  ;
-    background-color: $yellow-main;
 
     .data-container {
         .author {
@@ -105,23 +104,63 @@
 }
 
 .file-active {
-    .card {
+    .Mathematics-Surveying-and-Transportation-Engineering {
         &.document {
             display: block;
         }
-
+    
         &.question {
-            display: none;
+            display: none !important;
+        }
+    }
+
+    .Hydraulics-and-Geotechnical-Engineering {
+        &.document {
+            display: block;
+        }
+    
+        &.question {
+            display: none !important;
+        }
+    }
+
+    .Structural-Engineering-and-Construction {
+        &.document {
+            display: block;
+        }
+    
+        &.question {
+            display: none !important;
         }
     }
 }
 
 .question-active {
-    .card {
+    .Mathematics-Surveying-and-Transportation-Engineering {
         &.document {
-            display: none;
+            display: none !important;
         }
+    
+        &.question {
+            display: block;
+        }
+    }
+    
+    .Hydraulics-and-Geotechnical-Engineering {
+        &.document {
+            display: none !important;
+        }
+    
+        &.question {
+            display: block;
+        }
+    }
 
+    .Structural-Engineering-and-Construction {
+        &.document {
+            display: none !important;
+        }
+    
         &.question {
             display: block;
         }

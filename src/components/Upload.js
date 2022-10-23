@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
-import { addDoc, collection, Timestamp } from 'firebase/firestore'
+import React, { useState, Component } from 'react'
+import { addDoc, collection, Timestamp} from 'firebase/firestore'
 import { storage, db } from './firebase/firebase'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { v4} from 'uuid'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate, useNavigate} from 'react-router-dom'
+import $, { fn } from 'jquery'
+import Loading from './loading/Loading'
 
 function Upload() {
     const [title, setTitle] = useState('')
@@ -15,6 +17,8 @@ function Upload() {
     const getFileUrl = () => {setPdfUrl(`pdf/${pdfUpload.name + v4() + '.pdf'}`)}
     const params = useParams()
     const dataCategory = params.categoryId
+    document.body.classList.add('done-loading-data')
+    const fileUrl = useNavigate()
     
     const menuClick = (e) => {
         if (type === 'document') {
@@ -22,7 +26,7 @@ function Upload() {
         } else {
             setType('document')
         }
-    };
+    };  
 
     const today = Date.now()
 
@@ -33,6 +37,7 @@ function Upload() {
     var time = Timestamp.now();
 
     function handleSubmit(e) {
+        document.body.classList.remove('done-loading-data')
         e.preventDefault()
         if (pdfUpload == null) return;
         const pdfRef = ref(storage, pdfUrl)
@@ -48,6 +53,7 @@ function Upload() {
                 const filesCollectionRef = collection(db, 'pdfFiles')
                 addDoc(filesCollectionRef, { title, desc, author, pdfUrl, url, reportCount, likeCount, time, date, type, dataCategory}).then(response => {
                     console.log(response)
+                    fileUrl(`/file/${response.id}`, { replace: true })
                 }).catch(error => {
                     console.log(error.message)
                 })
@@ -55,28 +61,52 @@ function Upload() {
         })
     }
 
+    function jQuerycode() {
+        // validate the inputs
+        $.fn.validate = function() {
+            var inputOne = $('.inputOne').val();
+            var inputTwo = $('.inputTwo').val();
+            var inputThree = $('.inputThree').val();
+
+            if (inputOne === '' || inputTwo === '' || inputThree === '') {
+                $('.submit-data').prop('disabled', true);
+            } else {
+                $('.submit-data').prop('disabled', false);
+            }
+        }
+
+        setInterval(function () {
+            $.fn.validate()
+        }, 1000);
+        
+    }
+
+    jQuerycode();
+
     return (
-        <div className='upload-main-container'>
+        <div className='upload-main-container h-100 d-flex align-items-center pt-0'>
+            <Loading />
             <div className='container'>
-                <div className='upload-container col-10'>
+                <div className='upload-container col-12 col-md-10'>
                     <h4>Upload {type}</h4>
                     <form onSubmit={handleSubmit} className='d-flex flex-column'>
                         <div className='input-wrapper d-flex flex-column flex-md-row justify-content-between align-items-start mb-1'>
                             <div className='col-12 col-md-6 p-1'>
-                                <input className='mb-3 form-control' id='title' type='text' placeholder='Title' value={title} onChange={ e=> setTitle(e.target.value) }/>
-                                <input className='mb-3 form-control' id='desc' type='textarea' placeholder='Description' value={desc} onChange={ e=> setDesc(e.target.value) }/>
-                                <input className='mb-3 form-control' id='author' type='text' placeholder='Your Name' value={author} onChange={ e=> setAuthor(e.target.value) }/>
+                                <input className='mb-3 form-control inputOne' id='title' type='text' placeholder='Title' value={title} onChange={ e=> setTitle(e.target.value) }/>
+                                <input className='mb-3 form-control inputTwo' id='desc' type='textarea' placeholder='Description' value={desc} onChange={ e=> setDesc(e.target.value) }/>
+                                <input className='mb-3 form-control inputThree' id='author' type='text' placeholder='Your Name' value={author} onChange={ e=> setAuthor(e.target.value) }/>
                             </div>
                             <div className='file-input-container col-12 col-md-6 d-flex justify-content-start flex-column p-1'>
-                                <button className='btn btn-primary file-type mb-3' onClick={menuClick}>Type: {type}</button>
+                                <p className='btn btn-primary file-type mb-3' onClick={menuClick}>Type: {type}</p>
                                 <div className='file-input-btn-wrapper'>
                                     <input className='file-input' accept="application/pdf, application/vnd.ms-excel" type='file' onChange={(event) => {setPdfUpload(event.target.files[0])}} />
                                     <button className='file-overlay'><i className="fas fa-upload"></i>Select File</button>
                                 </div>
                             </div>
                         </div>
-                        <button className='btn btn-primary' type='submit' onClick={getFileUrl}>Upload</button>
+                        <button className='btn btn-primary submit-data' type='submit' onClick={getFileUrl}>Upload</button>
                     </form>
+                    
                 </div>
             </div>
         </div>

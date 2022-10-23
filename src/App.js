@@ -10,6 +10,7 @@ import SingleFilePage from "./components/SingleFilePage"
 import Browse from "./components/Browse"
 import UploadCategory from "./components/UploadCategory"
 import Upload from "./components/Upload"
+import Footer from "./components/Footer"
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                     <Route path='/browse' element={<Browse />} />
                     <Route path='/file/:fileId' element={<SingleFilePage />} />
                 </Routes>
+                <Footer />
             </div>
         </Router>
     )

@@ -1,6 +1,23 @@
 .upload-main-container {
     padding-top: 100px;
 
+    .loading-main-container {
+        background-color: rgba(128, 128, 128, 0.541);
+        z-index: 999;
+
+        .loading {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            
+            &::after {
+                display: none;
+            }
+        }
+    }
+
     .upload-container {
         margin: auto;
 
@@ -42,4 +59,129 @@
             }
         }
     }
+}
+
+.cat-one {
+    .Mathematics-Surveying-and-Transportation-Engineering {
+        &.document {
+            display: block;
+        }
+
+        &.question {
+            display: block;
+        }
+    }
+
+    .Hydraulics-and-Geotechnical-Engineering {
+        &.document {
+            display: none;
+        }
+
+        &.question {
+            display: none;
+        }
+    }
+
+    .Structural-Engineering-and-Construction {
+        display: none;
+    }
+}
+
+.cat-two {
+    .Hydraulics-and-Geotechnical-Engineering {
+        &.document {
+            display: block;
+        }
+
+        &.question {
+            display: block;
+        }
+    }
+
+    .Mathematics-Surveying-and-Transportation-Engineering {
+        display: none;
+
+        &.document {
+            display: none;
+        }
+
+        &.question {
+            display: none;
+        }
+    }
+
+    .Structural-Engineering-and-Construction {
+        &.document {
+            display: none;
+        }
+
+        &.question {
+            display: none;
+        }
+    }
+}
+
+.cat-three {
+    .Structural-Engineering-and-Construction {
+        &.document {
+            display: block;
+        }
+
+        &.question {
+            display: block;
+        }
+    }
+
+    .Mathematics-Surveying-and-Transportation-Engineering {
+        &.document {
+            display: none;
+        }
+
+        &.question {
+            display: none;
+        }
+    }
+
+    .Hydraulics-and-Geotechnical-Engineering {
+        &.document {
+            display: none;
+        }
+
+        &.question {
+            display: none;
+        }
+    }
+}
+
+
+.refinements-container {
+    .section-title {
+        font-family: 'Bebas Neue';
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: capitalize;
+        
+        &:last-child {
+            margin-top: 10px;
+        }
+    }
+
+    button {
+        background-color: transparent;
+        font-family: 'Poppins';
+        border: none;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+        font-size: 16px;
+        text-align: left;
+        border-bottom: solid 1px $gray;
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
+}
+
+.upload-category-main-container {
+    padding-top: 100px;
 }
