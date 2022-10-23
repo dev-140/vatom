@@ -24,28 +24,19 @@ function Navigation() {
             <div className='container'>
                 <div className='d-flex justify-content-center'>
                     <div className='col-lg-11'>
-                        <div className='navbar bg-light navbar-expand-lg navbar-light d-flex'>
+                        <div className='navbar bg-light navbar-expand-lg navbar-light d-flex justify-content-between'>
                             <a className='navbar-brand' href='#TEST'>vatom</a>
 
-                            <i className={isActive ? 'fa-solid fa-xmark menu-btn' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
+                            <i className={isActive ? 'fa-solid fa-xmark menu-btn d-none' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
 
                             <div className={isActive ? 'nav-links-container d-flex active' : 'nav-links-container d-flex'}>
-                                <div className='btn-group' onClick={menuClick}>
-                                    <Link to='' className='btn btn-secondary'>Home</Link>
-                                    <Link to='/browse' className='btn btn-secondary'>Browse</Link>
-                                    <a href='#TEST' className='btn btn-secondary'>About</a>
-                                    <Link to='/upload-category' className='btn btn-secondary'>Upload</Link>
-                                    {/* <Link to='/home/login' className='btn btn-secondary'>Login</Link> */}
-                                </div>
-                                
-                                {/* <div className='input-group'>
-                                    <div className='input-group-prepend'>
-                                        <a href='#TEST' className='input-group-text search-btn' id='btnGroupAddon'><i className='fa-solid fa-magnifying-glass'></i></a>
-                                    </div>
-                                    <input type='text' className='form-control search-box' placeholder='Search'></input>
-                                </div> */}
-
                                 <i className={isActive ? 'fa-solid fa-xmark menu-btn' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
+                                <div onClick={menuClick} className='menu-mobile-container'>
+                                    <Link to='' className='link'>Home</Link>
+                                    <Link to='/browse' className='link'>Browse</Link>
+                                    <a href='#TEST' className='link'>About</a>
+                                    <Link to='/upload-category' className='link'>Upload</Link>
+                                </div>
                             </div>
                         </div>
                     </div>

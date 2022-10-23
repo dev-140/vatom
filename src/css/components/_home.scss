@@ -1,187 +1,86 @@
-.banner-container {
-    height: 100vh;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-
-    .slider-main-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-.bg-color-banner {
-    background-color: $yellow-main;
-    position: relative;
-
-    .hero-text {
-        position: absolute;
-        bottom: 132px;
-        left: -95px;
-        background-color: $charcoal;
-        padding-left: 20px;
-        @include bebas;
-        font-size: 3rem;
-        width: 300px;
-        color: $white;
-        letter-spacing: 5px;
-        transform: rotate(270deg);
-    }
-}
-
-.fix-bg-banner {
-    background-image: url(../images/home-banner.jpeg);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    z-index: 1;
-    transition: all 1s ease-in-out;
-    opacity: 1;
-    display: block;
-    box-sizing: border-box;
-    clip-path: ellipse(81% 100% at 81% 0%);
-
-    &.top {
-        background-position: center -20px;
-    }
-
-    .container {
-        background: none;
-
-        .justify-content-center {
-            background: none;
-
-            .col-lg-11 {
-                background: none;
-                
-                .banner-container {
-                    background: none;
-                    position: relative;
-
-                    .slider-main-container {
-                        position: fixed;
-                        transition: all 1s ease-in-out;
-                        top: 33%;
-
-                        .welcome-text {
-                            background-color: $ash;
-                            display: flex;
-                            flex-direction: column;
-                            padding: 10px;
+.homepage-main-container {
+    .homepage-banner {
+        margin-bottom: 8rem;
     
-                            h3 {
-                                color: $charcoal;
-                                @include bebas;
-                                font-size: 6rem;
-                                margin: 0;
-                            }
-                        }
-
-                        &.top {
-                            transform: translateY(-100vh);
-                        }
+        @include media-breakpoint-down(md) {
+            padding-top: 50px;
+            margin-bottom: 5rem;
+        }
+    
+        .homepage-heading {
+            color: $purple;
+            font-family: 'Poppins';
+            font-size: 56px;
+            line-height: 1.18;
+            font-weight: 500;
+            margin-bottom: 28px;
+    
+            @include media-breakpoint-down(lg) {
+                font-size: 47px;
+            }
+        }
+    
+        .sub-heading {
+            color: $purple;
+            font-family: 'Poppins';
+            font-weight: 300;
+            font-size: 21px;
+            margin: 1.5rem 0px 2rem;
+            line-height: 1.41;
+        }
+    
+        .cta-container {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 4rem;
+    
+                button {
+                    &:first-child {
+                        margin-right: 10px;
                     }
                 }
             }
         }
-    }
-}
-
-//================ SLICK SLIDER ================//
-
-.slick-slider {
-    width: 1200px;
-
-    @include media-breakpoint-down(xl) {
-        width: 850px;
-    }
-
-    @include media-breakpoint-down(lg) {
-        width: 700px;
-    }
-
-    @include media-breakpoint-down(md) {
-        width: 500px;
-    }
-
-    @include media-breakpoint-down(sm) {
-        width: 300px;
-    }
-
-    .slider-box {
-        height: 94vh;
-        overflow: hidden;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        background-position: center;
-
-        .slider-image {
-            height: auto;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            z-index: 1;
-        }
-
-        .slider-content {
-            z-index: 2;
-            position: relative;
-            background-color: rgba(255, 255, 255, 0.6); 
-            color: rgba(255, 255, 255, 0.6);
-            padding: 25px;
-            width: 100%;
-
-            p {
-                background-color: transparent;
-                color: $black;
-                @include poppins;
-                font-weight: 600;
-            }
-
-            .hero-text {
-                font-size: 20px;
-                font-weight: 900;
+    
+        .img-banner {
+            img {
+                width: 100%;
+                height: auto;
             }
         }
     }
 
-    .slick-arrow {
-        display: none;
-    }   
-}
+    .home-second-section {
+        margin-bottom: 8rem;
 
-.latest-blogs-main-container {
-    background: rgb(255,209,0);
-    background: linear-gradient(5deg, rgba(255,209,0,1) 29%, rgba(255,238,50,1) 54%);
+        @include media-breakpoint-down(sm) {
+            margin-bottom:  5rem;
+        }
 
-    .container {
-        background: none;
+        .second-section-heading {
+            @include media-breakpoint-down(md) {
+                font-size: 32px;
+            }
+        }
+    }
 
-        .justify-content-center {
-            background: none;
+    .home-third-section {
+        .about {
+            margin-bottom: 8rem;
 
-            .latest-blogs-container {
-                padding-bottom: 50px;
-                background: transparent;
-                padding-top: 150px;
-                transition: all .2s ease-in-out;
+            @include media-breakpoint-down(md) {
+                margin-bottom: 5rem;
+            }
 
-                .section-title {
-                    @include bebas;
-                    font-size: 3rem;
-                    font-weight: 700;
-                    letter-spacing: 2px;
+            .purple-heading  {
+                @include media-breakpoint-down(md) {
+                    margin-bottom: 0;
                 }
+            }
 
-                .blog-container {
-                    margin-top: 20px;
-                    display: flex;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    gap: 20px;
+            .section-img {
+                width: 100%;
+                @include media-breakpoint-down(md) {
+                    margin-bottom: 0;
                 }
             }
         }

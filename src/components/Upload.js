@@ -1,10 +1,10 @@
-import React, { useState, Component } from 'react'
+import React, { useState} from 'react'
 import { addDoc, collection, Timestamp} from 'firebase/firestore'
 import { storage, db } from './firebase/firebase'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import { v4} from 'uuid'
-import { useParams, Navigate, useNavigate} from 'react-router-dom'
-import $, { fn } from 'jquery'
+import { useParams, useNavigate} from 'react-router-dom'
+import $ from 'jquery'
 import Loading from './loading/Loading'
 
 function Upload() {
@@ -88,7 +88,7 @@ function Upload() {
             <Loading />
             <div className='container'>
                 <div className='upload-container col-12 col-md-10'>
-                    <h4>Upload {type}</h4>
+                    <h4 className='purple-sub-heading'>Upload {type}</h4>
                     <form onSubmit={handleSubmit} className='d-flex flex-column'>
                         <div className='input-wrapper d-flex flex-column flex-md-row justify-content-between align-items-start mb-1'>
                             <div className='col-12 col-md-6 p-1'>
@@ -97,16 +97,15 @@ function Upload() {
                                 <input className='mb-3 form-control inputThree' id='author' type='text' placeholder='Your Name' value={author} onChange={ e=> setAuthor(e.target.value) }/>
                             </div>
                             <div className='file-input-container col-12 col-md-6 d-flex justify-content-start flex-column p-1'>
-                                <p className='btn btn-primary file-type mb-3' onClick={menuClick}>Type: {type}</p>
+                                <p className='purple-btn file-type mb-3' onClick={menuClick}>Type: {type}</p>
                                 <div className='file-input-btn-wrapper'>
                                     <input className='file-input' accept="application/pdf, application/vnd.ms-excel" type='file' onChange={(event) => {setPdfUpload(event.target.files[0])}} />
                                     <button className='file-overlay'><i className="fas fa-upload"></i>Select File</button>
                                 </div>
                             </div>
                         </div>
-                        <button className='btn btn-primary submit-data' type='submit' onClick={getFileUrl}>Upload</button>
+                        <button className='btn purple-btn submit-data' type='submit' onClick={getFileUrl}>Upload</button>
                     </form>
-                    
                 </div>
             </div>
         </div>

@@ -4,8 +4,7 @@ html {
 
 body {
     box-sizing: border-box;
-    margin: 0; 
-    background-color: $light-orange;
+    margin: 0;
 }
 
 .col-lg-11 {
@@ -16,7 +15,7 @@ body {
 
 .container {
     @include media-breakpoint-down(md) {
-         padding: 0 20px;
+        padding: 0 20px;
     }
 }
 
@@ -33,24 +32,93 @@ i {
 
 //=============== Buttons ===============//
 
-// .btn-primary {
-//     text-decoration: none;
-//     height: 100%;
-//     background-color: $orange-main;
-//     color: $white;
-//     border: $orange-main solid 0.5px;
-//     height: fit-content;
+.purple-btn {
+    background: rgb(46, 24, 106);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    border: 1px solid rgb(237, 243, 245);
+    border-radius: 4px;
+    padding: 13px 0px;
+    cursor: pointer;
+    margin-top: 0.625rem;
+    max-width: 180px;
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: rgba(23, 31, 114, 0.144) 0px 16px 30px;
 
-//     &:hover {
-//         background-color: $orange;
-//         border: $orange solid 0.5px;
-//     }
-// }
+    &:hover {
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(255, 130, 92);
+        background-color: rgb(255, 130, 92);
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 80%;
+    }
+}
+
+a.purple-btn {
+    padding: 13px 20px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.white-btn {
+    background: rgb(255, 255, 255);
+    color: rgb(46, 24, 106);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    border: 1px solid rgb(237, 243, 245);
+    border-radius: 4px;
+    padding: 13px 0px;
+    cursor: pointer;
+    margin-top: 0.625rem;
+    max-width: 180px;
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: rgba(23, 31, 114, 0.144) 0px 16px 30px;
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(255, 130, 92);
+        background-color: rgb(255, 130, 92);
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 80%;
+    }
+}
 
 .slick-dots li button:before {
     top: -30px;
     font-size: 11px;
     color: $orange-main !important;
+}
+
+//=============== Headings ================//
+.purple-heading {
+    color: $purple;
+    font-family: 'Poppins';
+    font-size: 56px;
+    line-height: 1.18;
+    font-weight: 500;
+    margin-bottom: 28px;
+
+    @include media-breakpoint-down(md) {
+        font-size: 26px;
+    }
+}
+
+.purple-sub-heading {
+    color: $purple;
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 21px;
+    margin: 1.5rem 0px 2rem;
+    line-height: 1.41;
 }
 
 //=============== Dividers ===============//

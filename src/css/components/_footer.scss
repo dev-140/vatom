@@ -1,4 +1,23 @@
 .footer-main-container {
-    background-color: $charcoal;
-    color: $white;
+    background: rgb(241, 242, 243);
+    color: $purple;
+
+    h5 {
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 22px;
+        text-transform: capitalize;
+    }
+
+    .nav-item {
+        font-family: 'Poppins';
+        font-size: 16px;
+        color: $black;
+        cursor: pointer;
+        text-transform: capitalize;
+        line-height: 24px;
+        display: block;
+        margin-bottom: 0.625rem;
+        max-width: max-content;
+    }
 }
