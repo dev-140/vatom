@@ -10,19 +10,8 @@ function Homepage() {
     return (
         <div className='homepage-main-container'>
             <div className='container'>
-                <ScrollContainer>
-                    <ScrollPage>
-                        <Animator animation={batch(Fade(), Sticky(), MoveOut(2000, 0))}>
-                            <Banner />
-                        </Animator>
-                    </ScrollPage>
-                    <ScrollPage>
-                        <Animator animation={batch(Fade(), Sticky(), MoveIn(-2000, -0), MoveOut(2000, 0))}>
-                            <SecondSection />
-                        </Animator>
-                    </ScrollPage>
-                </ScrollContainer>
-                
+                <Banner />
+                <SecondSection />
                 <ThirdSection />
             </div>
         </div>
