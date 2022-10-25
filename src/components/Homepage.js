@@ -19,7 +19,6 @@ function Homepage() {
             <ScrollAnimation animateIn="animate__fadeInLeft" animateOut='fadeOut' initiallyVisible={true}>
                 <ThirdSection />
             </ScrollAnimation>
-            
             </div>
         </div>
     )

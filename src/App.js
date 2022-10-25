@@ -11,11 +11,13 @@ import Browse from "./components/Browse"
 import UploadCategory from "./components/UploadCategory"
 import Upload from "./components/Upload"
 import Footer from "./components/Footer"
+import ScrollTop from "./components/ScrollTop"
 
 function App() {
     return (
         <Router>
             <div className="App">
+                <ScrollTop />
                 <Navigation />
                 <Routes>
                     <Route path='' element={<Homepage />} /> 
