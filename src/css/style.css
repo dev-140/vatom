@@ -13084,6 +13084,10 @@ a.purple-btn {
   }
 }
 
+.homepage-main-container .home-second-section .purple-btn {
+  padding: 13px 20px;
+}
+
 .homepage-main-container .home-third-section .about {
   margin-bottom: 8rem;
 }
