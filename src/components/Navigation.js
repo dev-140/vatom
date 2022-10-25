@@ -22,9 +22,9 @@ function Navigation() {
     return (
         <div className={onTop}>
             <div className='container'>
-                <div className='d-flex justify-content-center'>
-                    <div className='col-lg-11'>
-                        <div className='navbar bg-light navbar-expand-lg navbar-light d-flex justify-content-between'>
+                <div className='d-flex justify-content-start'>
+                    <div className='col-12'>
+                        <div className='navbar bg-light navbar-expand-lg navbar-light d-flex justify-content-between pt-3 pt-md-2'>
                             <a className='navbar-brand' href='#TEST'>vatom</a>
 
                             <i className={isActive ? 'fa-solid fa-xmark menu-btn d-none' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>

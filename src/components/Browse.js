@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import BlogMain from './blog/BlogMain'
 import Categories from './blog/Categories'
 import Loading from './loading/Loading'
