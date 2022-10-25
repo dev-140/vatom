@@ -12547,6 +12547,8 @@ i {
   transition: all 0.3s ease-in-out 0s;
   -webkit-box-shadow: rgba(23, 31, 114, 0.144) 0px 16px 30px;
           box-shadow: rgba(23, 31, 114, 0.144) 0px 16px 30px;
+  font-family: 'Poppins';
+  letter-spacing: 2px;
 }
 
 .purple-btn:hover {
@@ -12567,6 +12569,7 @@ a.purple-btn {
   font-weight: 300;
   text-transform: capitalize;
   text-decoration: none;
+  text-align: center;
 }
 
 .white-btn {
@@ -12585,6 +12588,7 @@ a.purple-btn {
   transition: all 0.3s ease-in-out 0s;
   -webkit-box-shadow: rgba(23, 31, 114, 0.144) 0px 16px 30px;
           box-shadow: rgba(23, 31, 114, 0.144) 0px 16px 30px;
+  font-family: 'Poppins';
 }
 
 .white-btn:hover {
@@ -12642,6 +12646,11 @@ a.purple-btn {
 
 .divider-one.yellow-secondary {
   background-color: #ffd100;
+}
+
+.padding-divider {
+  height: 5rem;
+  width: 100%;
 }
 
 .blog-cards {

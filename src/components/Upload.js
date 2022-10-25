@@ -19,7 +19,7 @@ function Upload() {
     const dataCategory = params.categoryId
     document.body.classList.add('done-loading-data')
     const fileUrl = useNavigate()
-    
+
     const menuClick = (e) => {
         if (type === 'document') {
             setType('question')
@@ -29,9 +29,7 @@ function Upload() {
     };  
 
     const today = Date.now()
-
     var date = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit'}).format(today)
-
     var reportCount = 0;
     var likeCount = 0;
     var time = Timestamp.now();
@@ -84,7 +82,7 @@ function Upload() {
     jQuerycode();
 
     return (
-        <div className='upload-main-container h-100 d-flex align-items-center pt-0'>
+        <div className='upload-main-container d-flex align-items-center h-100 pt-0'>
             <Loading />
             <div className='container'>
                 <div className='upload-container col-12 col-md-10'>
