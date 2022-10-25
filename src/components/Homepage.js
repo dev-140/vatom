@@ -12,11 +12,11 @@ function Homepage() {
             <ScrollAnimation animateIn="fadeIn" initiallyVisible={true}>
                 <Banner />
             </ScrollAnimation>
-            <ScrollAnimation animateIn="animate__fadeInLeft" animateOut='fadeOut' initiallyVisible={true}>
+            <ScrollAnimation animateIn="animate__fadeInLeft" animateOut='fadeOut'>
                 <SecondSection />
             </ScrollAnimation>
             <Padding />
-            <ScrollAnimation animateIn="animate__fadeInLeft" animateOut='fadeOut' initiallyVisible={true}>
+            <ScrollAnimation animateIn="animate__fadeInLeft" animateOut='fadeOut'>
                 <ThirdSection />
             </ScrollAnimation>
             </div>
