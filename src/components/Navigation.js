@@ -25,27 +25,30 @@ function Navigation() {
 
     return (
         <div className={onTop}>
-            <div className='container'>
-                <div className='d-flex justify-content-start'>
-                    <div className='col-12'>
-                        <div className='navbar bg-light navbar-expand-lg navbar-light d-flex justify-content-between pt-3 pt-md-2'>
-                            <a className='navbar-brand' href='#TEST'>vatom</a>
+            <div className={isActive ? 'active' : ''}>
+                <div className='container'>
+                    <div className='d-flex justify-content-start'>
+                        <div className='col-12'>
+                            <div className='navbar bg-light navbar-expand-lg navbar-light d-flex justify-content-between pt-3 pt-md-2'>
+                                <a className='navbar-brand' href='#TEST'>vatom</a>
 
-                            <i className={isActive ? 'fa-solid fa-xmark menu-btn d-none' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
+                                <i className={isActive ? 'fa-solid fa-xmark menu-btn d-none' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
 
-                            <div className={isActive ? 'nav-links-container d-flex active' : 'nav-links-container d-flex'}>
-                                <i className={isActive ? 'fa-solid fa-xmark menu-btn' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
-                                <div onClick={menuClick} className='menu-mobile-container'>
-                                    <Link to='/home' className='link'>Home</Link>
-                                    <Link to='/browse' className='link'>Browse</Link>
-                                    <Link to='/upload-category' className='link'>Upload</Link>
+                                <div className={isActive ? 'nav-links-container d-flex active' : 'nav-links-container d-flex'}>
+                                    <i className={isActive ? 'fa-solid fa-xmark menu-btn' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
+                                    <div onClick={menuClick} className='menu-mobile-container'>
+                                        <Link to='/home' className='link'>Home</Link>
+                                        <Link to='/browse' className='link'>Browse</Link>
+                                        <Link to='/upload-category' className='link'>Upload</Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
+                <motion.div className='page-line'  style={{ scaleX: scrollYProgress, background: purple, height: '5px' }}></motion.div>
             </div>
-            <motion.div  style={{ scaleX: scrollYProgress, background: purple, height: '5px' }}></motion.div>
         </div>
     )
 }

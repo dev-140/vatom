@@ -12893,6 +12893,12 @@ a.purple-btn {
   top: 0;
 }
 
+@media (max-width: 767.98px) {
+  .sticky .container.active .page-line {
+    display: none !important;
+  }
+}
+
 .sticky .navbar {
   background-color: transparent !important;
 }
