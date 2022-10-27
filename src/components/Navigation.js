@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { motion, useScroll } from 'framer-motion'
 
 function Navigation() {
     const [isActive, setIsActive] = useState(false);
@@ -19,6 +20,9 @@ function Navigation() {
         return () => clearInterval(interval);
     }, []);
 
+    const { scrollYProgress } = useScroll();
+    const purple = 'rgb(24, 33, 109)';
+
     return (
         <div className={onTop}>
             <div className='container'>
@@ -32,9 +36,8 @@ function Navigation() {
                             <div className={isActive ? 'nav-links-container d-flex active' : 'nav-links-container d-flex'}>
                                 <i className={isActive ? 'fa-solid fa-xmark menu-btn' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
                                 <div onClick={menuClick} className='menu-mobile-container'>
-                                    <Link to='' className='link'>Home</Link>
+                                    <Link to='/home' className='link'>Home</Link>
                                     <Link to='/browse' className='link'>Browse</Link>
-                                    <a href='#TEST' className='link'>About</a>
                                     <Link to='/upload-category' className='link'>Upload</Link>
                                 </div>
                             </div>
@@ -42,6 +45,7 @@ function Navigation() {
                     </div>
                 </div>
             </div>
+            <motion.div  style={{ scaleX: scrollYProgress, background: purple, height: '5px' }}></motion.div>
         </div>
     )
 }

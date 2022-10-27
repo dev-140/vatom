@@ -16,7 +16,7 @@ function BlogCards(props) {
                     <p className='author-name'>{props.author}:</p>
                     <p className='date-created'>{props.time}</p>
                 </div>
-                <div className='card-sub-header d-flex'>
+                <div className='card-sub-header d-flex flex-column flex-row-md'>
                     <p className='file-type'>type: {props.type}</p>
                     <p className='data-category'>{category}</p>
                 </div>
@@ -25,7 +25,7 @@ function BlogCards(props) {
                     <p className='card-text'>{props.text}</p>
                 </div>
             </div>
-            <div className='d-flex justify-content-between card-footer'>
+            <div className='d-flex justify-content-start card-footer col-12'>
                 <Link to={`/file/${props.uid}`} target="_blank" rel="noopener noreferrer" className='btn btn-primary view'>view</Link>
                 <ReportBtn uid={props.uid} reportCount={props.reportCount}></ReportBtn>
                 <LikeBtn uid={props.uid} likeCount={props.likeCount}/>

@@ -12508,6 +12508,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
+  overflow-x: hidden;
 }
 
 @media (max-width: 767.98px) {
@@ -12559,7 +12560,7 @@ i {
 
 @media (max-width: 767.98px) {
   .purple-btn {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -12599,7 +12600,7 @@ a.purple-btn {
 
 @media (max-width: 767.98px) {
   .white-btn {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -12747,7 +12748,7 @@ a.purple-btn {
   border-radius: 17px;
   height: 43px;
   background-color: transparent;
-  width: 220px;
+  gap: 20px;
 }
 
 .blog-cards .card-footer .btn {
@@ -12818,6 +12819,7 @@ a.purple-btn {
   border-radius: 100px;
   border: solid 5px #ffee32;
   position: relative;
+  border-top-color: #18216d !important;
 }
 
 .loading-main-container .loading::after {
@@ -13118,98 +13120,83 @@ a.purple-btn {
   padding: 100px 0 50px;
 }
 
+.single-file-main-container .loading-main-container {
+  background-color: rgba(128, 128, 128, 0.541);
+  z-index: 999;
+}
+
+.single-file-main-container .loading-main-container .loading {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+}
+
+.single-file-main-container .loading-main-container .loading::after {
+  display: none;
+}
+
 .single-file-main-container .data-container .author {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   text-transform: capitalize;
-  letter-spacing: 1.2px;
-  font-weight: bold;
-  font-family: 'Poppins';
-  background-color: #333533;
-  padding: 10px;
-  font-size: 20px;
-  color: #FFFFFF;
-  border-radius: 10px;
 }
 
-.single-file-main-container .data-container .desc {
-  padding: 10px;
-  border-radius: 5px;
-  width: 100%;
+.single-file-main-container .data-container .data-title {
   text-align: center;
-  font-size: 36px;
-  letter-spacing: 1.2px;
-  font-weight: bold;
-  color: #333533;
-  margin-bottom: 0;
-  font-family: 'Bebas Neue';
+  text-transform: capitalize;
 }
 
-.single-file-main-container .data-container .view-file-btn {
-  width: 200px;
+.single-file-main-container .upload-comment-main-container {
+  border-top: solid 1px #18216d;
+  margin-top: 20px;
+}
+
+.single-file-main-container .upload-comment-main-container input {
+  margin-right: 10px;
+}
+
+@media (max-width: 767.98px) {
+  .single-file-main-container .upload-comment-main-container input {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}
+
+.single-file-main-container .upload-comment-main-container .white-btn {
+  margin-top: 0;
+}
+
+.single-file-main-container .comment-section-heading {
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .single-file-main-container .comment-section {
-  margin-top: 50px;
+  margin-top: 20px;
   padding-top: 10px;
-  border-top: solid 1px #000000;
 }
 
-.single-file-main-container .comment-section .heading {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #333533;
-  color: #FFFFFF;
-  font-family: 'Poppins';
-  font-weight: bold;
-  letter-spacing: 2px;
+.single-file-main-container .comment-section .comment {
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #18216d;
 }
 
-.single-file-main-container .comment-section .comment-list {
-  padding: 10px 0 50px;
-  gap: 20px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.single-file-main-container .comment-section .comment-list .card {
-  padding: 10px;
-  min-width: 200px;
-  cursor: pointer;
-}
-
-.single-file-main-container .comment-section .comment-list .card .coment-date {
-  background-color: #ffd100;
-  border-radius: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #333533;
-  font-family: 'Poppins';
-  font-weight: bold;
-  padding: 5px;
-}
-
-.single-file-main-container .comment-section .comment-list .card .comment-details .author {
-  font-weight: bold;
-  text-transform: capitalize;
-  font-family: 'Poppins';
-  padding-bottom: 5px;
-  border-bottom: 3px solid #333533;
-  font-size: 20px;
-  letter-spacing: 1.5px;
-}
-
-.single-file-main-container .comment-section .comment-list .card .comment-details .comment-content {
-  margin-bottom: 0;
-  font-family: 'Poppins';
-  font-weight: 500;
+.single-file-main-container .comment-section .comment .coment-date {
   font-size: 16px;
-  letter-spacing: 1.5px;
+  margin: 10px 0;
+}
+
+.single-file-main-container .comment-section .comment .author {
+  text-transform: capitalize;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.single-file-main-container .comment-section .comment .comment-content {
+  font-size: 16px;
+  margin: 10px 0;
 }
 
 .blog-container {
@@ -13336,6 +13323,11 @@ a.purple-btn {
   height: 94px;
   width: 100%;
   border-radius: 5px;
+  background: transparent;
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 20px;
+  color: #18216d;
 }
 
 .upload-main-container .upload-container .input-wrapper .file-input-container .file-input-btn-wrapper .file-overlay i {
@@ -13424,8 +13416,9 @@ a.purple-btn {
 }
 
 .refinements-container .section-title {
-  font-family: 'Bebas Neue';
-  font-size: 20px;
+  font-family: 'Poppins';
+  color: #18216d;
+  font-size: 17px;
   font-weight: bold;
   text-transform: capitalize;
 }

@@ -6,6 +6,7 @@ import { v4} from 'uuid'
 import { useParams, useNavigate} from 'react-router-dom'
 import $ from 'jquery'
 import Loading from './loading/Loading'
+import { motion } from "framer-motion"
 
 function Upload() {
     const [title, setTitle] = useState('')
@@ -82,11 +83,11 @@ function Upload() {
     jQuerycode();
 
     return (
-        <div className='upload-main-container d-flex align-items-center h-100 pt-0'>
+        <motion.div className='upload-main-container d-flex align-items-center h-100 pt-0' initial={{ y: -1000 }} animate={{ y: 0 }} transition={{ delay: .1}}>
             <Loading />
             <div className='container'>
                 <div className='upload-container col-12 col-md-10'>
-                    <h4 className='purple-sub-heading'>Upload {type}</h4>
+                    <h4 className='purple-heading text-center text-md-start'>Upload {type}</h4>
                     <form onSubmit={handleSubmit} className='d-flex flex-column'>
                         <div className='input-wrapper d-flex flex-column flex-md-row justify-content-between align-items-start mb-1'>
                             <div className='col-12 col-md-6 p-1'>
@@ -106,7 +107,7 @@ function Upload() {
                     </form>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

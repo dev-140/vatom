@@ -1,97 +1,85 @@
 .single-file-main-container {
-    padding: 100px 0 50px  ;
+    padding: 100px 0 50px ;
 
-    .data-container {
-        .author {
-            width: fit-content;
-            text-transform: capitalize;
-            letter-spacing: 1.2px;
-            font-weight: bold;
-            font-family: 'Poppins';
-            background-color: $charcoal;
-            padding: 10px;
-            font-size: 20px;
-            color: $white;
-            border-radius: 10px;
-        }
+    .loading-main-container {
+        background-color: rgba(128, 128, 128, 0.541);
+        z-index: 999;
 
-        .desc {
-            padding: 10px;
-            border-radius: 5px;
-            width: 100%;
-            text-align: center;
-            font-size: 36px;
-            letter-spacing: 1.2px;
-            font-weight: bold;
-            color: $charcoal;
-            margin-bottom: 0;
-            font-family: 'Bebas Neue';
-        }
-
-        .view-file-btn {
-            width: 200px;
+        .loading {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
             
-        }
-    }
-
-    .comment-section {
-        margin-top: 50px;
-        padding-top: 10px;
-        border-top: solid 1px $black;
-
-        .heading {
-            width: fit-content;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: $charcoal;
-            color: $white;
-            font-family: 'Poppins';
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .comment-list {
-            padding: 10px 0 50px;
-            gap: 20px;
-            flex-wrap: wrap;
-
-            .card {
-                padding: 10px;
-                min-width: 200px;
-                cursor: pointer;
-
-                .coment-date {
-                    background-color: $yellow-secondary;
-                    border-radius: 10px;
-                    width: fit-content;
-                    color: $charcoal;
-                    font-family: 'Poppins';
-                    font-weight: bold;
-                    padding: 5px;
-                }
-
-                .comment-details {
-                    .author {
-                        font-weight: bold;
-                        text-transform: capitalize;
-                        font-family: 'Poppins';
-                        padding-bottom: 5px;
-                        border-bottom: 3px solid $charcoal;
-                        font-size: 20px;
-                        letter-spacing: 1.5px;
-                    }
-
-                    .comment-content {
-                        margin-bottom: 0;
-                        font-family: 'Poppins';
-                        font-weight: 500;
-                        font-size: 16px;
-                        letter-spacing: 1.5px;
-                    }
-                }
+            &::after {
+                display: none;
             }
         }
     }
+
+
+    .data-container {
+        .author {
+            text-transform: capitalize;
+        }
+
+        .data-title {
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+
+    .upload-comment-main-container {
+        border-top: solid 1px $purple;
+        margin-top: 20px;
+
+        input {
+            margin-right: 10px;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+        }
+
+        .white-btn {
+            margin-top: 0;
+        }
+    }
+
+    .comment-section-heading {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+   .comment-section {
+        margin-top: 20px;
+        padding-top: 10px;
+
+        .comment {
+            width: 100%;
+            margin-bottom: 10px;
+            border-bottom: solid 1px $purple;
+
+            .coment-date {
+                font-size: 16px;
+                margin: 10px 0;
+            }
+
+            .author {
+                text-transform: capitalize;
+                margin: 10px 0;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .comment-content {
+                font-size: 16px;
+                margin: 10px 0;
+            }
+        }
+   }
 }
 
 .blog-container {

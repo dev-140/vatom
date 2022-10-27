@@ -5,6 +5,7 @@ html {
 body {
     box-sizing: border-box;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .col-lg-11 {
@@ -237,7 +238,7 @@ a.purple-btn {
         border-radius: 17px;
         height: 43px;
         background-color: transparent;
-        width: 220px;
+        gap: 20px;
 
         .btn {
             font-size: 12px;
@@ -303,6 +304,7 @@ a.purple-btn {
         border-radius: 100px;
         border: solid 5px $yellow-main;
         position: relative;
+        border-top-color: $purple !important;
 
         &::after {
             content: '';

@@ -57,6 +57,11 @@
                         height: 94px;
                         width: 100%;
                         border-radius: 5px;
+                        background: transparent;
+                        font-family: 'Poppins';
+                        font-weight: 300;
+                        font-size: 20px;
+                        color: $purple;
 
                         i {
                             margin-right: 8px;
@@ -172,8 +177,9 @@
 
 .refinements-container {
     .section-title {
-        font-family: 'Bebas Neue';
-        font-size: 20px;
+        font-family: 'Poppins';
+        color: $purple;
+        font-size: 17px;
         font-weight: bold;
         text-transform: capitalize;
         

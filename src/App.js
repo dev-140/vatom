@@ -20,7 +20,7 @@ function App() {
                 <ScrollTop />
                 <Navigation />
                 <Routes>
-                    <Route path='' element={<Homepage />} /> 
+                    <Route path='/home' element={<Homepage />} /> 
                     <Route path='/blogs' element={<Blogs />} />
                     <Route path='*' element={<ErrorPage />}/>
                     <Route path='/login' element={<Login />} />

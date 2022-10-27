@@ -30,7 +30,7 @@ function Categories() {
     }
 
   return (
-    <div className='refinements-container d-flex flex-column col-2 p-1'>
+    <div className='refinements-container d-flex flex-column col-12 col-md-2 p-1'>
         <p className='section-title mb-1'>sort by category</p>
         <button onClick={catOne}>Mathematics, Surveying and Transportation Engineering</button>
         <button onClick={catTwo}>Hydraulics and Geotechnical Engineering</button>

@@ -2,11 +2,10 @@ import React from 'react'
 
 function Comment(props) {
     return (
-        <div className='comment card d-flex'>
-            <p className='coment-date'>{props.date}</p>
+        <div className='comment d-flex flex-column'>
+            <p className='coment-date purple-sub-heading'>{props.date}</p>
             <div className='comment-details d-flex flex-column'>
-                <p className='author'>by: {props.name}</p>
-                <p className='comment-content'>{props.comment}</p>
+                <p className='comment-content purple-sub-heading'><span className='author'>{props.name} - </span>{props.comment}</p>
             </div>
         </div>
     )

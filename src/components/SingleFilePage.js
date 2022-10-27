@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { doc, getDocs, getDoc, query, orderBy, addDoc, collection, Timestamp } from 'firebase/firestore'
 import { db } from './firebase/firebase'
+import $ from 'jquery'
 import Comment from './comment/Comment'
+import Padding from '../components/dividers/Padding'
+import { motion } from 'framer-motion'
+import Loading from './loading/Loading'
 
 function SingleFilePage() {
     const [data, setData] = useState({})
@@ -17,6 +21,7 @@ function SingleFilePage() {
     useEffect(() => {
         getData()
         getComments()
+        jQuerycode();
     }, [])
 
     const getData = async () => {
@@ -32,6 +37,7 @@ function SingleFilePage() {
             id: doc.id,
         }));
         console.log('repeating2')
+        document.body.classList.add('done-loading-data')
         
         setCommentList(newData);
     };
@@ -54,33 +60,41 @@ function SingleFilePage() {
             console.log(error.message)
         })
     }
-    
+
+    function jQuerycode() {
+        var count = $(".comment-list").children().length;
+        $('.comment-count').text('Comments: ' + count);
+    }
+
     return (
-        <div className='single-file-main-container h-100 pt-0 d-flex align-items-center'>
+        <motion.div className='single-file-main-container d-flex align-items-center flex-column' initial={{ y: -1000 }} animate={{ y: 0 }} transition={{ delay: .1}}>
+            <Loading />
+            <Padding />
             <div className='container flex-column'>
                 <div className='data-container d-flex flex-column'>
-                    <p className='author'>by: {data.author}</p>
-                    <p className='desc'>Description: {data.desc}</p>
-                    <a className='btn btn-primary view-file-btn' href={data.url}>View File</a>
-                </div>
-
-                <div className='comment-section'>
-                    <h4 className='heading'>Comments</h4>
-                    <div className='comment-list d-flex flex-row'>
-                        {commentList.map(comment => <Comment key={comment.id} name={comment.author} comment={comment.comment} date={comment.date} />)}
-                    </div>
+                    <p className='author purple-sub-heading'>by: {data.author}</p>
+                    <p className='purple-heading data-title'>{data.title}</p>
+                    <p className='desc purple-sub-heading'>{data.desc}</p>
+                    <a className='purple-btn' href={data.url}>View File</a>
                 </div>
 
                 <div className='upload-comment-main-container'>
-                    <h4>Add Comment</h4>
-                    <form onSubmit={handleSubmit}>
-                        <input id='name' type='text' placeholder='name' value={author} onChange={ e=> setAuthor(e.target.value) }/>
-                        <input id='comment' type='text' placeholder='comment' value={comment} onChange={ e=> setComment(e.target.value) }/>
-                        <button type='submit' onClick={getComments}>upload</button>
+                    <h4 className='purple-heading comment-section-heading'>Add Comment</h4>
+                    <form onSubmit={handleSubmit} className='d-flex flex-column flex-md-row'>
+                        <input id='name' className='form-control' type='text' placeholder='Name' value={author} onChange={ e=> setAuthor(e.target.value) }/>
+                        <input id='comment' className='form-control' type='text' placeholder='Comment' value={comment} onChange={ e=> setComment(e.target.value) }/>
+                        <button type='submit' className='white-btn' onClick={getComments}>Upload</button>
                     </form>
                 </div>
+
+                <div className='comment-section'>
+                    <h4 className='purple-heading comment-count comment-section-heading'>Comments:</h4>
+                    <div className='comment-list d-flex flex-column'>
+                        {commentList.map(comment => <Comment key={comment.id} name={comment.author} comment={comment.comment} date={comment.date} />)}
+                    </div>
+                </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
