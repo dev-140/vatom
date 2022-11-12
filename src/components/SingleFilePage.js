@@ -7,6 +7,7 @@ import Comment from './comment/Comment'
 import Padding from '../components/dividers/Padding'
 import { motion } from 'framer-motion'
 import Loading from './loading/Loading'
+import SecondSection from '../components/home/SecondSection'
 
 function SingleFilePage() {
     const [data, setData] = useState({})
@@ -21,13 +22,11 @@ function SingleFilePage() {
     useEffect(() => {
         getData()
         getComments()
-        jQuerycode();
     }, [])
 
     const getData = async () => {
         const docSnap = await getDoc(docRef);
         setData(docSnap.data())
-        console.log('repeating1')
     };
 
     const getComments = async () => {
@@ -40,6 +39,10 @@ function SingleFilePage() {
         document.body.classList.add('done-loading-data')
         
         setCommentList(newData);
+
+        setTimeout(() => {
+            jQuerycode()
+        }, 1000);
     };
 
     const today = Date.now()
@@ -64,6 +67,7 @@ function SingleFilePage() {
     function jQuerycode() {
         var count = $(".comment-list").children().length;
         $('.comment-count').text('Comments: ' + count);
+        $('.upload-comment-main-container input').val('');
     }
 
     return (
@@ -83,17 +87,21 @@ function SingleFilePage() {
                     <form onSubmit={handleSubmit} className='d-flex flex-column flex-md-row'>
                         <input id='name' className='form-control' type='text' placeholder='Name' value={author} onChange={ e=> setAuthor(e.target.value) }/>
                         <input id='comment' className='form-control' type='text' placeholder='Comment' value={comment} onChange={ e=> setComment(e.target.value) }/>
-                        <button type='submit' className='white-btn' onClick={getComments}>Upload</button>
+                        <button type='submit' className='white-btn' onClick={() => {getComments(); jQuerycode()}}>Upload</button>
                     </form>
                 </div>
 
                 <div className='comment-section'>
-                    <h4 className='purple-heading comment-count comment-section-heading'>Comments:</h4>
+                    <h4 className='purple-heading comment-count comment-section-heading'>Comments: Loading...</h4>
                     <div className='comment-list d-flex flex-column'>
                         {commentList.map(comment => <Comment key={comment.id} name={comment.author} comment={comment.comment} date={comment.date} />)}
                     </div>
                 </div>
             </div>
+
+            <Padding />
+
+            <SecondSection />
         </motion.div>
     )
 }

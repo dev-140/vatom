@@ -20,6 +20,12 @@
     }
 }
 
+.page-line {
+    @include media-breakpoint-down(md) {
+        display: none !important;
+    }
+}
+
 .sticky {
     width: 100%;
     position: fixed;
@@ -28,17 +34,7 @@
     transition: all .2s ease-in-out;
     top: 0;
 
-    .container {
-        &.active {
-            .page-line {
-                @include media-breakpoint-down(md) {
-                    display: none !important;
-                }
-            }
-        }
-    }
-
-    .navbar {
+    .navbar {   
         background-color: transparent !important;
     
         @include media-breakpoint-down(md) {
