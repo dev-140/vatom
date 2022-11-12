@@ -37,7 +37,7 @@ function Navigation() {
                                 <div className={isActive ? 'nav-links-container d-flex active' : 'nav-links-container d-flex'}>
                                     <i className={isActive ? 'fa-solid fa-xmark menu-btn' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
                                     <div onClick={menuClick} className='menu-mobile-container'>
-                                        <Link to='' className='link'>Home</Link>
+                                        <Link to='/home' className='link'>Home</Link>
                                         <Link to='/browse' className='link'>Browse</Link>
                                         <Link to='/upload-category' className='link'>Upload</Link>
                                         <Link to='/upload-category' className='link'>Terms & Condition</Link>

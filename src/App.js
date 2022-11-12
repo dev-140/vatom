@@ -2,7 +2,7 @@ import React from "react"
 import '../src/css/style.css'
 import Homepage from "./components/Homepage"
 import Navigation from "./components/Navigation"
-import { BrowserRouter as Router , Route, Routes } from 'react-router-dom'
+import { HashRouter as Router , Route, Routes } from 'react-router-dom'
 import Blogs from "./pages/Blogs"
 import ErrorPage from "./components/ErrorPage"
 import Login from "./components/Login"
@@ -12,8 +12,6 @@ import UploadCategory from "./components/UploadCategory"
 import Upload from "./components/Upload"
 import Footer from "./components/Footer"
 import ScrollTop from "./components/ScrollTop"
-
-// test
 
 function App() {
     return (
