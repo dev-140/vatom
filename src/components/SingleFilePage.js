@@ -76,9 +76,10 @@ function SingleFilePage() {
             <Padding />
             <div className='container flex-column'>
                 <div className='data-container d-flex flex-column'>
-                    <p className='author purple-sub-heading'>by: {data.author}</p>
+                    <p className='author purple-sub-heading mb-0'>by: {data.author}</p>
+                    <p className='school purple-sub-heading mt-0'>School: <span className='text-uppercase'>{data.school}</span></p>
                     <p className='purple-heading data-title'>{data.title}</p>
-                    <p className='desc purple-sub-heading'>{data.desc}</p>
+                    <p className='desc purple-sub-heading text-center'>{data.desc}</p>
                     <a className='purple-btn' href={data.url}>View File</a>
                 </div>
 

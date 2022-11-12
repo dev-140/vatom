@@ -12,6 +12,7 @@ import UploadCategory from "./components/UploadCategory"
 import Upload from "./components/Upload"
 import Footer from "./components/Footer"
 import ScrollTop from "./components/ScrollTop"
+import Terms from "./components/Terms"
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                     <Route path='/upload/:categoryId' element={<Upload />} />
                     <Route path='/browse' element={<Browse />} />
                     <Route path='/file/:fileId' element={<SingleFilePage />} />
+                    <Route path='/terms' element={<Terms />} />
                 </Routes>
                 <Footer />
             </div>

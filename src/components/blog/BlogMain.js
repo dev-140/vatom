@@ -23,7 +23,7 @@ function BlogMain() {
         getDocs(pdfListRef) 
         .then(response => {
             response.docs.forEach((doc) => {
-                console.log(doc.id, " => ", doc.data().reportCount);
+                // console.log(doc.id, " => ", doc.data().reportCount);
 
                 if(doc.data().reportCount >= 5) {
                     console.log('this needs to be removed', doc.id)
@@ -62,7 +62,7 @@ function BlogMain() {
 
     return (
         <div className='blog-container d-flex flex-column justify-content-between col-12 col-md-10'>
-            {postList.map(file => <BlogCards key={file.id} category={file.dataCategory} type={file.type} likeCount={file.likeCount} uid={file.id} time={file.date} reportCount={file.reportCount} author={file.author} bId={file.url} title={file.title} text={file.desc}/>)} 
+            {postList.map(file => <BlogCards key={file.id} school={file.school} category={file.dataCategory} type={file.type} likeCount={file.likeCount} uid={file.id} time={file.date} reportCount={file.reportCount} author={file.author} bId={file.url} title={file.title} text={file.desc}/>)} 
         </div> 
     )
 }

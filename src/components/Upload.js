@@ -17,6 +17,7 @@ function Upload() {
     const [type, setType] = useState('document')
     const getFileUrl = () => {setPdfUrl(`pdf/${pdfUpload.name + v4() + '.pdf'}`)}
     const params = useParams()
+    const [school, setSchool] = useState('');
     const dataCategory = params.categoryId
     document.body.classList.add('done-loading-data')
     const fileUrl = useNavigate()
@@ -44,13 +45,13 @@ function Upload() {
             alert('file uploaded')
 
             getDownloadURL(pdfRef).then(url => {
-                console.log('Download URL',url)
+                // console.log('Download URL',url)
 
                 if (title === '') {
                     return
                 }
                 const filesCollectionRef = collection(db, 'pdfFiles')
-                addDoc(filesCollectionRef, { title, desc, author, pdfUrl, url, reportCount, likeCount, time, date, type, dataCategory}).then(response => {
+                addDoc(filesCollectionRef, { title, desc, author, pdfUrl, url, reportCount, likeCount, time, date, type, dataCategory, school}).then(response => {
                     console.log(response)
                     fileUrl(`/file/${response.id}`, { replace: true })
                 }).catch(error => {
@@ -66,8 +67,9 @@ function Upload() {
             var inputOne = $('.inputOne').val();
             var inputTwo = $('.inputTwo').val();
             var inputThree = $('.inputThree').val();
+            var inputFour = $('.inputFour');
 
-            if (inputOne === '' || inputTwo === '' || inputThree === '') {
+            if (inputOne === '' || inputTwo === '' || inputThree === '' || inputFour === '') {
                 $('.submit-data').prop('disabled', true);
             } else {
                 $('.submit-data').prop('disabled', false);
@@ -94,6 +96,7 @@ function Upload() {
                                 <input className='mb-3 form-control inputOne' id='title' type='text' placeholder='Title' value={title} onChange={ e=> setTitle(e.target.value) }/>
                                 <input className='mb-3 form-control inputTwo' id='desc' type='textarea' placeholder='Description' value={desc} onChange={ e=> setDesc(e.target.value) }/>
                                 <input className='mb-3 form-control inputThree' id='author' type='text' placeholder='Your Name' value={author} onChange={ e=> setAuthor(e.target.value) }/>
+                                <input className='mb-3 form-control inputFour' id='school' type='text' placeholder='School' value={school} onChange={ e=> setSchool(e.target.value) }/>
                             </div>
                             <div className='file-input-container col-12 col-md-6 d-flex justify-content-start flex-column p-1'>
                                 <p className='purple-btn file-type mb-3' onClick={menuClick}>Type: {type}</p>

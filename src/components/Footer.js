@@ -17,12 +17,11 @@ function Footer() {
                                 </ul>
                             </div>
                             <div className='col-3 mb-3'>
-                                <h5>About us</h5>
+                                <h5>Vatom</h5>
                                 <ul className='nav flex-column'>
-                                    <li className='nav-item mb-2'>vatom</li>
-                                    <li className='nav-item mb-2'>vatom</li>
-                                    <li className='nav-item mb-2'>vatom</li>
-                                    <li className='nav-item mb-2'>vatom</li>
+                                    <li className='nav-item mb-2'>fast</li>
+                                    <li className='nav-item mb-2'>easy to use</li>
+                                    <li className='nav-item mb-2'>free to use</li>
                                 </ul>
                             </div>
                             <div className='col-3 mb-3'>

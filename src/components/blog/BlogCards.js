@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import LikeBtn from './LikeBtn'
 import ReportBtn from './ReportBtn'
@@ -7,7 +6,7 @@ function BlogCards(props) {
     var currCategory = props.category
     var category = currCategory.replace(/-/g, " ");
 
-    console.log(category)
+    // console.log(category)
 
     return (
         <div className={`blog-cards card ${props.type} ${props.category}`} id={props.blogNo}>
@@ -18,6 +17,7 @@ function BlogCards(props) {
                 </div>
                 <div className='card-sub-header d-flex flex-column flex-row-md'>
                     <p className='file-type'>type: {props.type}</p>
+                    <p className='file-type'>school: {props.school}</p>
                     <p className='data-category'>{category}</p>
                 </div>
                 <div className='card-body d-flex flex-column'>
