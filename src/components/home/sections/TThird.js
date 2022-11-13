@@ -12,9 +12,11 @@ function TThird() {
                     </ScrollAnimation>
                 </div>
                 <div className='d-flex flex-column col-12 col-md-6'>
-                    <h6 className='purple-heading'>That's about it!</h6>
+                    <h6 className='purple-heading'>About Us</h6>
                     <ScrollAnimation animateIn="animate__lightSpeedInLeft" animateOut='fadeOut' delay={500}>
-                        <p className='purple-sub-heading'>If you are familiar with React, or SPA frameworks in general, there shouldn't be any confusing parts about this template. if not, you can always reach out to me and I'll try me best to answer your questions.</p>
+                        <p className='purple-sub-heading'>CELibrary is an online learning platform containing civil engineering resources. It was founded in 2022 by VATOM Corporation, which is composed of college students from the Technological Institute of the Philippines located in Quezon City. Its goal is to help civil engineering students in graduating with confidence and preparedness in every engineering problem that they may encounter. Students can download a portable document format or PDF file that is available on the website and may also upload files for sharing with others. Another benefit of the platform is that students can communicate with other users in real-time for some questions and answers as long as the user is still using or browsing the platform. 
+                        CELibrary provides a variety of learning resources and tools to assist users in studying more deeply and successfully throughout the course of their civil engineering careers.
+                        </p>
                     </ScrollAnimation>
                 </div>
             </div>

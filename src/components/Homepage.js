@@ -4,7 +4,7 @@ import SecondSection from './home/SecondSection'
 import ThirdSection from './home/ThirdSection'
 import Padding from '../components/dividers/Padding'
 import ScrollAnimation from 'react-animate-on-scroll'
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 
 function Homepage() {
     return (
