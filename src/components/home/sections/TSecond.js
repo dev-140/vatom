@@ -7,9 +7,9 @@ function TSecond() {
         <ScrollAnimation animateIn="animate__fadeInLeft" animateOut='fadeOut'>
             <div className='about d-flex col-12 d-flex justify-content-between flex-column flex-md-row'>
                 <div className='d-flex flex-column col-12 col-md-6'>
-                    <h6 className='purple-heading'>Ready made sections</h6>
+                    <h6 className='purple-heading'>Ready made materials</h6>
                     <ScrollAnimation animateIn="animate__lightSpeedInLeft" animateOut='fadeOut' delay={600}>
-                        <p className='purple-sub-heading'>Landy comes with a set of ready to use sections to help you easily create a landing page for your own brand, with all the content your startup desires. In order to replace any dummy elements (text, image, etc..) all you need to do is go to content folder and input your real content.</p>
+                        <p className='purple-sub-heading'>CE-rtify comes with a set of ready-to-use sections to help students to learn the system quickly and use it efficiently. Its simplicity and use of straightforward language for labels and categories make it a user-friendly website.</p>
                     </ScrollAnimation>
                 </div>
                 <div className='col-12 col-md-6'>

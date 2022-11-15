@@ -14,7 +14,7 @@ function TFirst() {
                 <div className='d-flex flex-column col-12 col-md-6'>
                     <h6 className='purple-heading'>Light, fast & responsive</h6>
                     <ScrollAnimation animateIn="animate__lightSpeedInLeft" animateOut='fadeOut' delay={500}>
-                        <p className='purple-sub-heading'>This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.</p>
+                        <p className='purple-sub-heading'>Users may navigate the website with ease and perform multiple tasks with minimal difficulty thanks to the well-designed, seamless interface.</p>
                     </ScrollAnimation>
                 </div>
             </div>

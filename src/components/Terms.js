@@ -19,8 +19,8 @@ function Terms() {
                 <div className='terms-container'>
                     <h1 className='purple-heading'>Terms and Conditions</h1>
                     <div>
-                        <h4 className='purple-sm-heading'>Welcome to VATOM (“Company”, “we”, “our”, “us”)!</h4>
-                        <p className='purple-sub-heading'>These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website located at <Link to='/home'>https://dev-140.github.io/vatom/#/home</Link> (together or individually “Service”) operated by VATOM.</p>
+                        <h4 className='purple-sm-heading'>Welcome to VATOM Corporation (“Company”, “we”, “our”, “us”)!</h4>
+                        <p className='purple-sub-heading'>These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website located at <Link to='/home'>https://dev-140.github.io/vatom/#/home</Link> (together or individually “Service”) operated by VATOM Corporation.</p>
                     </div>
                     <div>
                         <p className='purple-sub-heading'>Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our web pages.
@@ -29,7 +29,7 @@ function Terms() {
                     </div>
                     <div>
                         <h4 className='purple-sm-heading'>2. Communications</h4>
-                        <p className='purple-sub-heading'>By using our Service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing at celibrary.helpsystem@gmail.com.</p>
+                        <p className='purple-sub-heading'>By using our Service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing at <span className='small-text'>celibrary.helpsystem@gmail.com.</span></p>
                     </div>
                     <div>
                         <h4 className='purple-sm-heading'>3. Contests, Sweepstakes and Promotions</h4>
@@ -40,8 +40,8 @@ function Terms() {
                         <p className='purple-sub-heading'>Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material (“Content”). You are responsible for Content that you post on or through Service, including its legality, reliability, and appropriateness.
                             By posting Content on or through Service, You represent and warrant that: (i) Content is yours (you own it) and/or you have the right to use it and the right to grant us the rights and license as provided in these Terms, and (ii) that the posting of your Content on or through Service does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person or entity. We reserve the right to terminate the account of anyone found to be infringing on a copyright.
                             You retain any and all of your rights to any Content you submit, post or display on or through Service and you are responsible for protecting those rights. We take no responsibility and assume no liability for Content you or any third party posts on or through Service. However, by posting Content using Service you grant us the right and license to use, modify, publicly perform, publicly display, reproduce, and distribute such Content on and through Service. You agree that this license includes the right for us to make your Content available to other users of Service, who may also use your Content subject to these Terms.
-                            VATOM has the right but not the obligation to monitor and edit all Content provided by users.
-                            In addition, Content found on or through this Service are the property of VATOM or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.
+                            VATOM Corporation has the right but not the obligation to monitor and edit all Content provided by users.
+                            In addition, Content found on or through this Service are the property of VATOM Corporation or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.
                         </p>
                     </div>
                     <div>
@@ -70,7 +70,7 @@ function Terms() {
                     </div>
                     <div>
                         <h4 className='purple-sm-heading'>7. Intellectual Property</h4>
-                        <p className='purple-sub-heading'>Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of VATOM and its licensors. Service is protected by copyright, trademark, and other laws of and foreign countries. Our trademarks may not be used in connection with any product or service without the prior written consent of VATOM.</p>
+                        <p className='purple-sub-heading'>Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of VATOM Corporation and its licensors. Service is protected by copyright, trademark, and other laws of and foreign countries. Our trademarks may not be used in connection with any product or service without the prior written consent of VATOM Corporation.</p>
                     </div>
                     <div>
                         <h4 className='purple-sm-heading'>8. Copyright Policy</h4>
@@ -87,8 +87,8 @@ You may be held accountable for damages (including costs and attorneys' fees) fo
                         <p className='purple-sub-heading'>0.3. identification of the URL or other specific location on Service where the material that you claim is infringing is located;</p>
                         <p className='purple-sub-heading'>0.4. your address, telephone number, and email address;</p>
                         <p className='purple-sub-heading'>0.5. a statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law;</p>
-                        <p className='purple-sub-heading'>0.6. a statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner’s behalf.</p>
-                        <p className='purple-sub-heading'>You can contact our Copyright Agent via email at celibrary.helpsystem@gmail.com.</p>
+                        <p className='purple-sub-heading'>0.6. a statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner's behalf.</p>
+                        <p className='purple-sub-heading'>You can contact our Copyright Agent via email at <span className='small-text'>celibrary.helpsystem@gmail.com.</span></p>
                     </div>
                     <div>
                         <h4 className='purple-sm-heading'>10. Error Reporting and Feedback</h4>
@@ -97,8 +97,8 @@ You may be held accountable for damages (including costs and attorneys' fees) fo
                     </div>
                     <div>
                         <h4 className='purple-sm-heading'>11. Links To Other Web Sites</h4>
-                        <p className='purple-sub-heading'>Our Service may contain links to third party web sites or services that are not owned or controlled by VATOM.
-VATOM has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.
+                        <p className='purple-sub-heading'>Our Service may contain links to third party web sites or services that are not owned or controlled by VATOM Corporation.
+                        VATOM Corporation has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.
 YOU ACKNOWLEDGE AND AGREE THAT COMPANY SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH CONTENT, GOODS OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY WEB SITES OR SERVICES.
 WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY POLICIES OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT.
 </p>
@@ -150,9 +150,8 @@ If any provision of Terms is held by a court or other tribunal of competent juri
                         <p className='purple-sub-heading'>BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY THEM.</p>
                     </div>
                     <div>
-                        <h4 className='purple-sm-heading'>Terms and Conditions:</h4>
-                        <p className='purple-sub-heading'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                            sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <h4 className='purple-sm-heading'>20. Contact Us</h4>
+                        <p className='purple-sub-heading'>Please send your feedback, comments, requests for technical support by email: <span className='small-text'>celibrary.helpsystem@gmail.com.</span></p>
                     </div>
                 </div>
 

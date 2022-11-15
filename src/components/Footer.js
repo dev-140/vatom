@@ -17,7 +17,7 @@ function Footer() {
                                 </ul>
                             </div>
                             <div className='col-3 mb-3'>
-                                <h5>Vatom</h5>
+                                <h5>Vatom Corporation</h5>
                                 <ul className='nav flex-column'>
                                     <li className='nav-item mb-2'>fast</li>
                                     <li className='nav-item mb-2'>easy to use</li>
@@ -35,7 +35,7 @@ function Footer() {
                             </div>
                         </div>
                         <div className='col-12'>
-                            <p className='purple-sub-heading text-center'>VATOM © 2022</p>
+                            <p className='purple-sub-heading text-center'>VATOM Corporation © 2022</p>
                         </div>
                     </div>
                 </div>

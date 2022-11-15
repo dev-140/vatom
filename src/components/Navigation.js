@@ -48,7 +48,7 @@ function Navigation() {
                     <div className='d-flex justify-content-start'>
                         <div className='col-12'>
                             <div className='navbar bg-light navbar-expand-lg navbar-light d-flex justify-content-between pt-3 pt-md-2'>
-                            <Link to='/home' className='navbar-brand'>CELibrary</Link>
+                            <Link to='/home' className='navbar-brand'>CE-rtify</Link>
 
                                 <i className={isActive ? 'fa-solid fa-xmark menu-btn d-none' : 'fa-solid fa-bars menu-btn'} onClick={menuClick}></i>
 
@@ -58,7 +58,7 @@ function Navigation() {
                                         <Link to='/home' className='link'>Home</Link>
                                         <Link to='/browse' className='link'>Browse</Link>
                                         <Link to='/upload-category' className='link'>Upload</Link>
-                                        <Link to='/terms' className='link'>Terms & Condition</Link>
+                                        <Link to='/terms' className='link'>Terms & Conditions</Link>
                                     </div>
                                 </div>
                             </div>

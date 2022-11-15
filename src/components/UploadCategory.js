@@ -37,7 +37,7 @@ function UploadCategory() {
                             <motion.div className='card col-12 col-md-3 mt-2 mt-0 mt-md-0' initial={{ y: -2000 }} animate={{ y: 0 }} transition={{ delay: .2}}>
                                 <img className='card-img-top' src={cardImgThree}  alt="img"/>
                                 <div className='card-body'>
-                                    <h5 className='card-title'>Structural</h5>
+                                    <h5 className='card-title'>Structural & Construction</h5>
                                     <p className='card-text'>Structural Engineering and Construction</p>
                                     <Link to={`/upload/Structural-Engineering-and-Construction`} rel="noopener noreferrer" className='purple-btn'>Upload</Link>
                                 </div>
