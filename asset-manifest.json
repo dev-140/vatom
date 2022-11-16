@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vatom/static/css/main.88b69b6c.css",
-    "main.js": "/vatom/static/js/main.7f71c6a7.js",
+    "main.js": "/vatom/static/js/main.21042022.js",
     "static/js/787.c6006e9a.chunk.js": "/vatom/static/js/787.c6006e9a.chunk.js",
     "static/media/IMG1-3.png": "/vatom/static/media/IMG1-3.3131df26ba128158bf22.png",
     "static/media/Screenshot-2019-11-18-at-12.12.05-PM.png": "/vatom/static/media/Screenshot-2019-11-18-at-12.12.05-PM.1fbae745f0a97c7c2bbb.png",
@@ -12,11 +12,11 @@
     "static/media/undraw_Helpful_sign_re_8ms5.png": "/vatom/static/media/undraw_Helpful_sign_re_8ms5.51b86e8a843f8d9afbe1.png",
     "index.html": "/vatom/index.html",
     "main.88b69b6c.css.map": "/vatom/static/css/main.88b69b6c.css.map",
-    "main.7f71c6a7.js.map": "/vatom/static/js/main.7f71c6a7.js.map",
+    "main.21042022.js.map": "/vatom/static/js/main.21042022.js.map",
     "787.c6006e9a.chunk.js.map": "/vatom/static/js/787.c6006e9a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.88b69b6c.css",
-    "static/js/main.7f71c6a7.js"
+    "static/js/main.21042022.js"
   ]
 }
